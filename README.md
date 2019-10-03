@@ -1,13 +1,7 @@
----
-title: 'ESOF stuff'
-disqus: hackmd
----
+# Guideasy
 
-Guideasy
-===
-## Table of Contents
-
-[TOC]
+## Context
+Project developed in the context of OpenCX, an integrated set of apps to improve the collective experience (CX) and participation of people attending professional conferences, group meetings and public spaces in general.
 
 ## Product Vision
 Swift navigation between key spots in a conference through a mobile app.
@@ -29,9 +23,11 @@ Swift navigation between key spots in a conference through a mobile app.
 - Git (version control)
 - Trello
 - Draw.io (UML)
+- HackMD
 
-User story
----
+## Use cases
+
+## User story
 
 ```gherkin=
 Feature: Guess the word
@@ -67,38 +63,10 @@ Feature: Shopping Cart
 
 > Read more about Gherkin here: https://docs.cucumber.io/gherkin/reference/
 
-User flows
----
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-Note left of Alice: Alice responds
-Alice->Bob: Where have you been?
-```
+## Domain analysis
 
-> Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
-
-Project Timeline
----
-```mermaid
-gantt
-    title A Gantt Diagram
-
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    anther task      : 24d
-```
-
-> Read more about mermaid here: http://knsv.github.io/mermaid/
-
-## Appendix and FAQ
-
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
-
-###### tags: `Templates` `Documentation`
+## Team
+* [Miguel Pinto](https://github.com/MiguelDelPinto "MiguelDelPinto")
+* [Márcia Teixeira](https://github.com/marciat "marciat")
+* [Mário Gil](https://github.com/GambuzX "GambuzX")
+* [Pedro Esteves](https://github.com/pemesteves "pemesteves")
