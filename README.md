@@ -1,4 +1,4 @@
-# Guideasy
+# Guideasy :iphone: :feet:
 
 ## Context
 Project developed in the context of OpenCX, an integrated set of apps to improve the collective experience (CX) and participation of people attending professional conferences, group meetings and public spaces in general.
