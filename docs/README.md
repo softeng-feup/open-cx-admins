@@ -23,3 +23,7 @@ As a conference participant, I'd like a map displaying all of the key spots at t
 
 ## Detail Freak
 As a conference-goer, I want to get detailed information about an important spot, so that I know exactly where I'm going.
+
+# Use case diagram :memo:
+
+![Use cases diagram](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/use_cases/guideasy_use_cases.png "Guideasy Use Cases")
