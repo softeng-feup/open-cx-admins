@@ -33,27 +33,42 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Center(
-            child: Text(
-              'Take me to...',
-              style: theme.textTheme.display1,
+          Expanded(
+            flex: 1,
+            child: Center(
+              child: Text(
+                'Take me to...',
+                style: theme.textTheme.display1,
+              ),
             ),
           ),
-          /*GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            crossAxisCount: 2,
-            children: <Widget>[
-              HomePageButton(icon: Icons.help_outline),
-              HomePageButton(icon: Icons.settings),
-              HomePageButton(icon: Icons.local_drink),
-            ],
-          ),*/
-          HomePageButton(icon: Icons.help_outline),
-          HomePageButton(icon: Icons.settings),
-          HomePageButton(icon: Icons.local_drink),
+          Expanded(
+            flex: 1,
+            child: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 0),
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 30,
+              crossAxisCount: 3,
+              children: <Widget>[
+                HomePageButton(icon: Icons.help_outline),
+                HomePageButton(icon: Icons.settings),
+                HomePageButton(icon: Icons.local_drink),
+                HomePageButton(icon: Icons.help_outline),
+                HomePageButton(icon: Icons.settings),
+                HomePageButton(icon: Icons.local_drink),
+                HomePageButton(icon: Icons.help_outline),
+                HomePageButton(icon: Icons.settings),
+                HomePageButton(icon: Icons.local_drink),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Center(
+                child: RoomSearchBar(),
+            ),
+          ),
         ],
       ),
     );
@@ -79,6 +94,33 @@ class HomePageButton extends StatelessWidget {
       ),
       onPressed: () {
 
+      },
+    );
+  }
+}
+
+class RoomSearchBar extends StatefulWidget {
+  @override
+  RoomSearchBarState createState() => RoomSearchBarState();
+}
+
+class RoomSearchBarState extends State<RoomSearchBar> {
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        prefixIcon: Icon(
+          Icons.search,
+          color: Colors.white,
+        ),
+        border: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white, width: 100)
+        ),
+        labelStyle: Theme.of(context).textTheme.body2,
+        labelText: 'Search room',
+      ),
+      onChanged: (input) {
+        // do stuff
       },
     );
   }
