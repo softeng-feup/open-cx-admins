@@ -17,10 +17,14 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+
+  HomePage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       backgroundColor: Color(0xffff9900),
       appBar: AppBar(
         title: Center(
@@ -34,7 +38,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Center(
               child: Text(
                 'Take me to...',
@@ -43,7 +47,13 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
+            child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 60, vertical: 0),
+                child: RoomSearchBar())
+          ),
+          Expanded(
+            flex: 7,
             child: GridView.count(
               primary: false,
               padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 0),
@@ -64,11 +74,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
-            child: Center(
-                child: RoomSearchBar(),
-            ),
-          ),
+            flex: 2,
+            child: MapSlideButton(),
+          )
         ],
       ),
     );
@@ -82,7 +90,7 @@ class HomePageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return RaisedButton(
       color: Colors.white,
       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10)),
@@ -93,7 +101,7 @@ class HomePageButton extends StatelessWidget {
 
       ),
       onPressed: () {
-
+        FocusScope.of(context).requestFocus(new FocusNode());
       },
     );
   }
@@ -109,19 +117,50 @@ class RoomSearchBarState extends State<RoomSearchBar> {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.all(0),
         prefixIcon: Icon(
           Icons.search,
           color: Colors.white,
         ),
         border: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.white, width: 100)
+          borderSide: BorderSide(
+              color: Colors.white,
+              width: 1
+          )
+        ),
+        enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+                color: Colors.white,
+                width: 1
+            )
         ),
         labelStyle: Theme.of(context).textTheme.body2,
         labelText: 'Search room',
       ),
+      cursorColor: Colors.white,
+      style: Theme.of(context).textTheme.body2,
       onChanged: (input) {
         // do stuff
       },
+    );
+  }
+}
+
+class MapSlideButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox.expand(
+      child: FlatButton(
+        color: Theme.of(context).backgroundColor,
+        child: Icon(
+          Icons.keyboard_arrow_up,
+          color: Colors.white,
+          size: 100,
+        ),
+        onPressed: () {
+
+        },
+      ),
     );
   }
 
