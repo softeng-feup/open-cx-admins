@@ -2,43 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'package:guideasy_app/view/widgets/RunningAnimation.dart';
+
 class SplashScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => SplashScreenState();
-
 }
 
-class SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
-
-  AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      duration: const Duration(
-        seconds: 1),
-      vsync: this,
-    )..repeat();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+class SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-    //final animation = Tween(begin: 0, end: 10).animate(_controller);
-
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: Column(
         children: <Widget>[
           Spacer(
-            flex: 1,
+            flex: 5,
           ),
           Expanded(
             flex: 4,
@@ -49,21 +29,21 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
               ),
             ),
           ),
-          Expanded(
+          Spacer(
             flex: 2,
-            child: AnimatedBuilder(
-              animation: _controller,
-              child: Container(width: 200.0, height: 200.0, color: Colors.green),
-              builder: (BuildContext context, Widget child) {
-                return Transform.rotate(
-                  angle: _controller.value * 2.0 * math.pi,
-                  child: child,
-                );
+          ),
+          Expanded(
+            flex: 8,
+            child: RunningAnimation(
+              height: 200,
+              width: 200,
+              duration: 2,
+              begin: -300.0,
+              end: 300.0,
+              animationCallback: () {
+                // change route
               },
             )
-          ),
-          Spacer(
-            flex: 3,
           ),
         ],
       ),
