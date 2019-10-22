@@ -33,7 +33,7 @@ Thank you!
 
 :poodle: [Márcia Teixeira](https://github.com/marciat "marciat")
 
-:cow2: [Mário Gil](https://github.com/GambuzX "GambuzX")
+:squirrel: [Mário Gil](https://github.com/GambuzX "GambuzX")
 
 :dromedary_camel: [Miguel Pinto](https://github.com/MiguelDelPinto "MiguelDelPinto")
 
