@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guideasy_app/view/pages/HomePage.dart';
 import 'package:guideasy_app/view/pages/SplashScreen.dart';
+import 'package:guideasy_app/view/pages/MapPage.dart';
 
 import 'Theme.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Guideasy App',
       theme: applicationTheme,
-      home: SplashScreen(),
+      home: MapPage(),
     );
   }
 }
