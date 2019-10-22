@@ -41,7 +41,6 @@ class RunningAnimationState extends State<RunningAnimation> with SingleTickerPro
     _controller.addStatusListener((status) {
       if(status == AnimationStatus.completed && widget.animationCallback != null) {
         widget.animationCallback();
-        print("oi");
       }
     });
 
@@ -59,7 +58,7 @@ class RunningAnimationState extends State<RunningAnimation> with SingleTickerPro
   Widget build(BuildContext context) {
     return Transform.translate(
       child: Image(
-        image: AssetImage('assets/splash_screen/running.png'),
+        image: AssetImage('assets/splash_screen/running_gif.gif'),
         width: widget.width,
         height: widget.height,
       ),

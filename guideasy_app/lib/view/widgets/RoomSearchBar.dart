@@ -38,6 +38,7 @@ class RoomSearchBarState extends State<RoomSearchBar> {
       style: Theme.of(context).textTheme.body2,
       onChanged: (input) {
         // do stuff
+        print("Searching for " + input);
       },
     );
   }

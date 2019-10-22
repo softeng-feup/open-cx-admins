@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Color(0xffff9900),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Center(
             child: Text(
               'Guideasy',
