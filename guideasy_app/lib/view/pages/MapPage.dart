@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:guideasy_app/view/widgets/FilterBox.dart';
 
 class MapPage extends StatefulWidget {
   @override
@@ -12,8 +13,11 @@ class MapPage extends StatefulWidget {
 
 class _ConferenceMap extends State<MapPage> {
   GoogleMapController _controller;
+  FilterBox _mapFilterBox;
+  bool _pressedFiltersButton = false;
+  double _filterBoxHeight;
 
-  static const LatLng _center = const LatLng(41.177774, -8.596334);
+  static const LatLng _center = const LatLng(41.17765, -8.596625);
 
   List<String> _filters;
 
@@ -26,6 +30,12 @@ class _ConferenceMap extends State<MapPage> {
     ThemeData theme = Theme.of(context);
     _filters = ["WC", "Elevators", "Stairs", "Reception", "Lost & Found",
       "Snack Bar", "Coffee Break", "Vending Machine"];
+    _filterBoxHeight = MediaQuery.of(context).size.height*0.85;
+    _mapFilterBox = FilterBox(
+      filters: _filters,
+      height: 0,
+    );
+
     return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomPadding: false,
@@ -42,47 +52,32 @@ class _ConferenceMap extends State<MapPage> {
           ],
           backgroundColor: Color(0xffff9900),
         ),
-        body: GoogleMap(
-          mapType: MapType.hybrid,
-          onMapCreated: _onMapCreated,
-          initialCameraPosition: CameraPosition(
-            bearing: 90,
-            target: _center,
-            tilt: 0,
-            zoom: 17.5,
+        body: Stack(
+          children: <Widget>[
+            GoogleMap(
+            mapType: MapType.terrain,
+            onMapCreated: _onMapCreated,
+            initialCameraPosition: CameraPosition(
+              bearing: 105,
+              target: _center,
+              tilt: 0,
+              zoom: 18,
+            ),
           ),
+            _mapFilterBox,
+        ]
         ),
       ),
     );
   }
 
   void _showFilters(){
-    Navigator.push(
-      context,
-      MaterialPageRoute<void>(
-        builder: (BuildContext context){
-          final Iterable<ListTile> tiles = _filters.map(
-                (String filter){
-              return ListTile(
-                title: Text(filter),
-              );
-            },
-          );
-          final List<Widget> divided = ListTile
-              .divideTiles(
-                context: context,
-                tiles: tiles,
-              )
-              .toList();
-
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('Filters: '),
-            ),
-            body: ListView(children: divided),
-          );
-        },
-      ),
-    );
+    //Set State
+    _pressedFiltersButton = !_pressedFiltersButton;
+    if(_pressedFiltersButton){
+      _mapFilterBox.height = _filterBoxHeight;
+    }else{
+      _mapFilterBox.height = 0;
+    }
   }
 }
