@@ -1,0 +1,23 @@
+{
+  "locations": [{
+    "keyword": "B001",
+    "id" : 1,
+    "roomNumber": "001",
+    "position": "150m"
+  }, {
+    "keyword": "B121",
+    "id" : 2,
+    "roomNumber": "121",
+    "position": "10m"
+  }, {
+    "keyword": "Auditorio",
+    "id" : 3,
+    "roomNumber": "",
+    "position": "300m"
+  }, {
+    "keyword": "B123",
+    "id" : 4,
+    "roomNumber": "123",
+    "position": "15m"
+  }]
+}

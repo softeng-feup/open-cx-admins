@@ -38,6 +38,7 @@ class HomePage extends StatelessWidget {
           Expanded(
               flex: 2,
               child: Container(
+                  alignment: Alignment.topCenter,
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 0),
                   child: RoomSearchBar())
           ),
