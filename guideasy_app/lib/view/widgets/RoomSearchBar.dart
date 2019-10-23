@@ -9,7 +9,7 @@ class RoomSearchBar extends StatefulWidget {
 class RoomSearchBarState extends State<RoomSearchBar> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return AutoCompleteTextfield(
       onEditingComplete: () {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
