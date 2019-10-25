@@ -5,8 +5,8 @@ Welcome to the documentation pages of Guideasy of **openCX**!
 You can find here detailed information about the (sub)product, hereby mentioned as module, from a high-level vision to low-level implementation decisions, a kind of Software Development Report (see [template](https://github.com/softeng-feup/open-cx/blob/master/docs/templates/Development-Report.md)), organized by discipline (as of RUP): 
 
 * Business modeling 
-  * [Product Vision](#Product-Vision)
-  * [Elevator Pitch](#Elevator-Pitch)
+  * [Product Vision](#Product-Vision-)
+  * [Elevator Pitch](#Elevator-Pitch-)
 * Requirements
   * [Use Case Diagram](#Use-case-diagram)
   * [User stories](#User-stories)
@@ -19,11 +19,11 @@ You can find here detailed information about the (sub)product, hereby mentioned 
   * [Source code]()
   * [Issues](): feature requests, bug fixes, improvements.
 * Test
-  * [Automated tests](): Functional tests, integration tests, acceptance tests, as much automated as possible.
+  * [Automated tests](#Automated-Tests): Functional tests, integration tests, acceptance tests, as much automated as possible.
 * Change management
   * [Issues at Github]()
 * Project management
-  * Tasks management tool 
+  * [Tasks management tool](#Tasks-Management-Tool)
 
 So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
@@ -209,3 +209,20 @@ As a person with bladder issues, I want to find a bathroom as soon as I can, so 
 ```
 A simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
 ```
+
+## Tests
+
+### Automated Tests
+
+#### Acceptance Tests
+We have defined some acceptance tests using Gherkin, which can be found in our [Trello board](https://trello.com/b/9YiPpP4W/esof) under 'Acceptance Tests - Gherkin'.
+
+For now they are only defined. The goal is for them to be automated in our application.
+
+## Project Management
+
+### Tasks Management Tool
+
+We use Trello to coordinate ourselves and to manage our tasks.
+
+You can find the board for this project [here](https://trello.com/b/9YiPpP4W/esof).
