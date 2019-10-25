@@ -209,6 +209,7 @@ As a person with bladder issues, I want to find a bathroom as soon as I can, so 
 ```
 A simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
 ```
+![Domain model](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/domain_model/domain_model.png)
 
 ## Tests
 
