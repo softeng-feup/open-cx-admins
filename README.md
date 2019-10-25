@@ -192,7 +192,7 @@ At the end, it is good to add a rough indication of the value of the user story 
 
 The user stories are organized in the following user story map:
 
-![](https://i.imgur.com/Uskwtm0.jpg)
+![User stories diagram](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/user_stories/user_stories.jpg)
 
 The Epic represented in the map is broken down into the following user stories:
 
