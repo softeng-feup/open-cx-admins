@@ -71,7 +71,6 @@ Take a look at the following links to learn some techniques:
 Attendees are often frustrated by the effort it takes to find the conference rooms, bathrooms, coffee break places, vending machines and snack-bars near a conference location. Guideasy eliminates the need to wander around and ask everyone where those places are. With our app, you can spend less wasted time searching where to go and focus on the conference itself. Here is our business card, do feel free to call us anytime. Thanks for your time!
 
 
-
 ## Requirements :clipboard:
 
 ```
@@ -191,17 +190,11 @@ For each user story you should write also the acceptance tests (textually in Ghe
 At the end, it is good to add a rough indication of the value of the user story to the customers (e.g. MoSCoW method) and the team should add an estimative of the effort to implement it, in t-shirt sizes (XS, S, M, L, XL).
 ```
 
-#### Conference Organizers
+The user stories are organized in the following user story map:
 
-##### Big Boss
-As a conference organizer, I want attendees to be able to circulate smoothly in the event, so that there are less delays and less traffic/confusion in the hallways.
+![](https://i.imgur.com/Uskwtm0.jpg)
 
----
-
-#### Conference Attendees
-
-##### Mr. Wants-To-Know-It-All
-As a conference lover, I want to find the conference rooms as soon as possible so that I don't lose any information.
+The Epic represented in the map is broken down into the following user stories:
 
 
 ##### Hungry Hippo
@@ -210,21 +203,6 @@ As a very hungry person, I want to quickly find any cafeterias or vending machin
 
 ##### Rain Man
 As a person with bladder issues, I want to find a bathroom as soon as I can, so that I don't embarrass myself.
-
-
-##### No Time To Waste
-As a conference participant, I want to know the exact location of the places I have to go to, so that I don't waste any time.
-
-
-##### Organization Lover
-As a conference participant, I'd like a map displaying all of the key spots at the venue, so I can better organize my schedule.
-
-
-##### Detail Freak
-As a conference-goer, I want to get detailed information about an important spot, so that I know exactly where I'm going and what I can do when I get there.
-
-##### Always Lost
-As a user with a very poor sense of direction, I want to have detailed instructions on how to get somewhere according to my position, so that I don't waste time trying to find the different places.
 
 
 ### Domain model
