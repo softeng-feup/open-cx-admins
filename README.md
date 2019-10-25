@@ -33,7 +33,7 @@ Thank you!
 
 :poodle: [Márcia Teixeira](https://github.com/marciat "marciat")
 
-:cow2: [Mário Gil](https://github.com/GambuzX "GambuzX")
+:squirrel: [Mário Gil](https://github.com/GambuzX "GambuzX")
 
 :dromedary_camel: [Miguel Pinto](https://github.com/MiguelDelPinto "MiguelDelPinto")
 
@@ -68,7 +68,7 @@ Take a look at the following links to learn some techniques:
 * [Top 7 Killer Elevator Pitch Examples, by toggl.com](https://blog.toggl.com/elevator-pitch-examples/)
 ```
 
-Attendees are often frustrated by the effort it takes to find the conference rooms, bathrooms, coffee break places, vending machines and snack-bars near a conference location. Guideasy eliminates the need to wander around and ask everyone where are those places.<!--Why You: “For [Duration], [Customer Type] have trusted [Your Company] to provide the best solutions in [Customer’s Industry].”-->With our app, you can spend less time searching for these places. I’ll give you a call to learn more about your situation. Thanks for your time.
+Attendees are often frustrated by the effort it takes to find the conference rooms, bathrooms, coffee break places, vending machines and snack-bars near a conference location. Guideasy eliminates the need to wander around and ask everyone where those places are. With our app, you can spend less wasted time searching where to go and focus on the conference itself. Here is our business card, do feel free to call us anytime. Thanks for your time!
 
 
 
