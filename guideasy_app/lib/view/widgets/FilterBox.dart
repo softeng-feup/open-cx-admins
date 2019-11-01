@@ -3,25 +3,26 @@ import 'package:flutter/material.dart';
 
 class FilterBox extends StatefulWidget {
   final List<String> filters;
-  double height;
 
-  FilterBox({@required this.filters, @required this.height});
+  FilterBox({this.filters});
 
   @override
-  _FilterBoxState createState() => new _FilterBoxState(height);
+  _FilterBoxState createState() => _FilterBoxState();//new _FilterBoxState(height);
 }
 
 class _FilterBoxState extends State<FilterBox>{
-  double height;
+  double opacity = 0.0;
 
-  _FilterBoxState(this.height);
+  //_FilterBoxState(this.height);
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     final Iterable<ListTile> tiles = widget.filters.map(
           (String filter){
         return ListTile(
-          title: Text(filter),
+          title: Text(filter,
+          style: TextStyle(color: Color(0xffff9900)),
+          ),
         );
       },
     );
@@ -33,19 +34,11 @@ class _FilterBoxState extends State<FilterBox>{
         .toList();
 
     return Container(
-      constraints: BoxConstraints.expand(
-        height: this.height,
+      //color: Color(0x00000000),
+      child: Opacity(
+        opacity: 0.0,
+        child: ListView(children: divided),
       ),
-      child: Scaffold(
-        appBar: AppBar(
-        title:
-          Text(
-            'Filters: ',
-            style: theme.textTheme.headline,
-          ),
-        ),
-        body: ListView(children: divided),
-      )
     );
   }
 }

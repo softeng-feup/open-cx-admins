@@ -31,13 +31,11 @@ class _ConferenceMap extends State<MapPage> {
     _filters = ["WC", "Elevators", "Stairs", "Reception", "Lost & Found",
       "Snack Bar", "Coffee Break", "Vending Machine"];
     _filterBoxHeight = MediaQuery.of(context).size.height*0.85;
-    _mapFilterBox = FilterBox(
-      filters: _filters,
-      height: 0,
+    _mapFilterBox = new FilterBox(
+      filters: _filters
     );
 
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         resizeToAvoidBottomPadding: false,
         backgroundColor: Color(0xffff9900),
         appBar: AppBar(
@@ -67,7 +65,6 @@ class _ConferenceMap extends State<MapPage> {
             _mapFilterBox,
         ]
         ),
-      ),
     );
   }
 
@@ -75,9 +72,11 @@ class _ConferenceMap extends State<MapPage> {
     //Set State
     _pressedFiltersButton = !_pressedFiltersButton;
     if(_pressedFiltersButton){
-      _mapFilterBox.height = _filterBoxHeight;
+      //FilterBox.of(context).opacity = 1.0;
+      //_mapFilterBox.height = _filterBoxHeight;
     }else{
-      _mapFilterBox.height = 0;
+      //FilterBox.of(context).opacity = 0.0;
+      //_mapFilterBox.height = 0;
     }
   }
 }
