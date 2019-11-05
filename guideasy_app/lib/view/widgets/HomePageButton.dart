@@ -20,6 +20,8 @@ class HomePageButton extends StatelessWidget {
       ),
       onPressed: () {
         FocusScope.of(context).requestFocus(new FocusNode());
+
+        print("Clicked navigation button");
       },
     );
   }

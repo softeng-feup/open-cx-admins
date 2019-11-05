@@ -5,8 +5,8 @@ Welcome to the documentation pages of Guideasy of **openCX**!
 You can find here detailed information about the (sub)product, hereby mentioned as module, from a high-level vision to low-level implementation decisions, a kind of Software Development Report (see [template](https://github.com/softeng-feup/open-cx/blob/master/docs/templates/Development-Report.md)), organized by discipline (as of RUP): 
 
 * Business modeling 
-  * [Product Vision](#Product-Vision)
-  * [Elevator Pitch](#Elevator-Pitch)
+  * [Product Vision](#Product-Vision-)
+  * [Elevator Pitch](#Elevator-Pitch-)
 * Requirements
   * [Use Case Diagram](#Use-case-diagram)
   * [User stories](#User-stories)
@@ -19,11 +19,11 @@ You can find here detailed information about the (sub)product, hereby mentioned 
   * [Source code]()
   * [Issues](): feature requests, bug fixes, improvements.
 * Test
-  * [Automated tests](): Functional tests, integration tests, acceptance tests, as much automated as possible.
+  * [Automated tests](#Automated-Tests): Functional tests, integration tests, acceptance tests, as much automated as possible.
 * Change management
   * [Issues at Github]()
 * Project management
-  * Tasks management tool 
+  * [Tasks management tool](#Tasks-Management-Tool)
 
 So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
@@ -31,13 +31,13 @@ Please contact us!
 
 Thank you!
 
-[Miguel Pinto](https://github.com/MiguelDelPinto "MiguelDelPinto")
+:poodle: [Márcia Teixeira](https://github.com/marciat "marciat")
 
-[Márcia Teixeira](https://github.com/marciat "marciat")
+:squirrel: [Mário Gil](https://github.com/GambuzX "GambuzX")
 
-[Mário Gil](https://github.com/GambuzX "GambuzX")
+:dromedary_camel: [Miguel Pinto](https://github.com/MiguelDelPinto "MiguelDelPinto")
 
-[Pedro Esteves](https://github.com/pemesteves "pemesteves")
+:dragon_face: [Pedro Esteves](https://github.com/pemesteves "pemesteves")
 
 ## Product Vision :zap:
 ```
@@ -57,6 +57,8 @@ To learn more about how to write a good product vision, please see also:
 Swift navigation between key spots in a conference through a mobile app.
 
 
+
+
 ## Elevator Pitch :speech_balloon:
 ```Draft a small text to help you quickly introduce and describe your product in a short time and a few words, a technique usually known as elevator pitch.
 
@@ -66,8 +68,7 @@ Take a look at the following links to learn some techniques:
 * [Top 7 Killer Elevator Pitch Examples, by toggl.com](https://blog.toggl.com/elevator-pitch-examples/)
 ```
 
-O nosso produto é uma app que ajuda as pessoas a orientarem-se numa conferência. Qualquer pessoa, vinda de qualquer parte do mundo, pode facilmente chegar ao local da conferência e sentir-se como em casa, pois a app indica a localização de todas as necessidades básicas de uma pessoa (comer, café, wc...). Traz novas funcionalidades além das apps já existentes...
-
+Attendees are often frustrated by the effort it takes to find the conference rooms, bathrooms, coffee break places, vending machines and snack-bars near a conference location. Guideasy eliminates the need to wander around and ask everyone where those places are. With our app, you can spend less wasted time searching where to go and focus on the conference itself. Here is our business card, do feel free to call us anytime. Thanks for your time!
 
 
 ## Requirements :clipboard:
@@ -97,6 +98,78 @@ Briefly describe each use case mentioning the following:
 
 ![Use cases diagram](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/use_cases/guideasy_use_cases.png "Guideasy Use Cases")
 
+#### Get directions for POI
+
+* **Actor**
+
+A conference attendant.
+
+* **Description**
+
+Presents direction to a specified POI, allowing easy navigation to anywhere that the user desires.
+
+* **Preconditions**
+
+The user must select a desired POI and he must in range to one of the bluetooth beacons, so that his position can be accurately determined.
+
+* **Postconditions**
+
+The app will highlight a path to the POI in the map.
+
+* **Normal Flow**
+
+1. The user selects a POI on the app's interactive map.
+2. A bluetooth beacon, connected to the user's cellphone at the moment, will extract information from the user's position.
+3. A path will be calculated from the user's position to the selected POI's position.
+4. The resulting path will be display on the app's interactive map, by highlighting the roads or corridors to it.
+
+* **Alternative Flows and Exceptions**
+
+1. The user selects a type of POI on the app's interactive map. It can be, for example, a conference or a bathroom.
+2. A bluetooth beacon, connected to the user's cellphone at the moment, will extract information from the user's position.
+3. A path will be calculated from the user's position to the nearest POI of the same type.
+4. The resulting path will be display on the app's interactive map, by highlighting the roads or corridors to it.
+
+---
+
+#### Visualize event map with POIs
+
+* **Actor**
+
+A conference attendant.
+
+* **Description**
+
+Presents a map with selected POI's, allowing the user to filter the type of POIs he wants to see.
+
+* **Preconditions**
+
+The user can select the desired POI from the map, using some filters to select it.
+
+* **Postconditions**
+
+The app will show the information about the selected POI. 
+
+* **Normal Flow**
+
+1. The user selects the visualize map option.
+2. The interactive map window will open and the map will be display.
+
+* **Alternative Flows and Exceptions**
+    
+    - **Filter POIs** 
+    1. The user selects one or more filters from the filter list. 
+    2. The filtered POI's appear on the app's interactive map. 
+    
+    <br>
+    
+    - **Get Info About POI**
+    1. The user selects one of the POI's on the app's interactive map.
+    2. The information about the selected POI will be display on the app's interactive map, near that point.
+---
+
+
+
 ### User stories
 
 ```
@@ -116,30 +189,41 @@ For each user story you should write also the acceptance tests (textually in Ghe
 
 At the end, it is good to add a rough indication of the value of the user story to the customers (e.g. MoSCoW method) and the team should add an estimative of the effort to implement it, in t-shirt sizes (XS, S, M, L, XL).
 ```
-#### Mr. Wants-To-Know-It-All
-As a conference lover, I want to find the conference rooms as soon as possible so that I don't lose any information.
+
+The user stories are organized in the following user story map:
+
+![User stories diagram](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/user_stories/user_stories.jpg)
+
+The Epic represented in the map is broken down into the following user stories:
 
 
-#### Hungry Hippo
+##### Hungry Hippo
 As a very hungry person, I want to quickly find any cafeterias or vending machines so that I don't starve.
 
 
-#### Rain Man
+##### Rain Man
 As a person with bladder issues, I want to find a bathroom as soon as I can, so that I don't embarrass myself.
 
-
-#### No Time To Waste
-As a conference participant, I want to know the exact location of the places I have to go to, so that I don't waste any time.
-
-
-#### Organization Lover
-As a conference participant, I'd like a map displaying all of the key spots at the venue, so I can better organize my schedule.
-
-
-#### Detail Freak
-As a conference-goer, I want to get detailed information about an important spot, so that I know exactly where I'm going.
 
 ### Domain model
 ```
 A simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
 ```
+![Domain model](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/domain_model/domain_model.png)
+
+## Tests
+
+### Automated Tests
+
+#### Acceptance Tests
+We have defined some acceptance tests using Gherkin, which can be found in our [Trello board](https://trello.com/b/9YiPpP4W/esof) under 'Acceptance Tests - Gherkin'.
+
+For now they are only defined. The goal is for them to be automated in our application.
+
+## Project Management
+
+### Tasks Management Tool
+
+We use Trello to coordinate ourselves and to manage our tasks.
+
+You can find the board for this project [here](https://trello.com/b/9YiPpP4W/esof).

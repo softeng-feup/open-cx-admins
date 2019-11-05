@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Color(0xffff9900),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Center(
             child: Text(
               'Guideasy',
@@ -37,6 +38,7 @@ class HomePage extends StatelessWidget {
           Expanded(
               flex: 2,
               child: Container(
+                  alignment: Alignment.topCenter,
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 0),
                   child: RoomSearchBar())
           ),
