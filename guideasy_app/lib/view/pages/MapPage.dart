@@ -31,9 +31,7 @@ class _ConferenceMap extends State<MapPage> {
     _filters = ["WC", "Elevators", "Stairs", "Reception", "Lost & Found",
       "Snack Bar", "Coffee Break", "Vending Machine"];
     _filterBoxHeight = MediaQuery.of(context).size.height*0.85;
-    _mapFilterBox = new FilterBox(
-      filters: _filters
-    );
+    _mapFilterBox = new FilterBox();
 
     return Scaffold(
         resizeToAvoidBottomPadding: false,
@@ -45,14 +43,12 @@ class _ConferenceMap extends State<MapPage> {
               style: theme.textTheme.headline,
             )
           ),
-          actions: <Widget>[
+          /*actions: <Widget>[
             IconButton(icon: Icon(Icons.list), onPressed: _showFilters, color: Colors.white),
-          ],
+          ],*/
           backgroundColor: Color(0xffff9900),
         ),
-        body: Stack(
-          children: <Widget>[
-            GoogleMap(
+        body: GoogleMap(
             mapType: MapType.terrain,
             onMapCreated: _onMapCreated,
             initialCameraPosition: CameraPosition(
@@ -61,10 +57,8 @@ class _ConferenceMap extends State<MapPage> {
               tilt: 0,
               zoom: 18,
             ),
-          ),
-            _mapFilterBox,
-        ]
         ),
+      endDrawer: _mapFilterBox,
     );
   }
 
