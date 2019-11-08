@@ -18,48 +18,56 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
                 ),
               ),
               ListTile(
+                  leading: Icon(Icons.wc),
                   title: Text('WC', style: TextStyle(color: Colors.black,)),
                   onTap: () {
                     Navigator.pop(context);
                   }
               ),
               ListTile(
+                leading: Icon(Icons.unfold_more),
                 title: Text('Elevators', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.show_chart),
                 title: Text('Stairs', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.room_service),
                 title: Text('Reception', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.find_in_page),
                 title: Text('Lost & Found', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.restaurant),
                 title: Text('Snack Bar', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.local_cafe),
                 title: Text('Coffee Break', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(Icons.kitchen),
                 title: Text('Vending Machine', style: TextStyle(color: Colors.black,)),
                 onTap: () {
                   Navigator.pop(context);
