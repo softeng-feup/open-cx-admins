@@ -1,9 +1,11 @@
+import 'package:guideasy_app/model/PointOfInterest.dart';
+
 class AppState {
   Map content = Map<String, dynamic>();
 
   Map getInitialContent() {
     return {
-      "pointsOfInterest" : [],
+      "pointsOfInterest" : new List<PointOfInterest>(),
       "poisStatus" : RequestStatus.NONE
     };
   }

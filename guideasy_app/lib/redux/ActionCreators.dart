@@ -21,7 +21,7 @@ ThunkAction<AppState> getRemotePointsOfInterest() {
       store.dispatch(new SavePOIsStatusAction(RequestStatus.BUSY));
       
       // retrieve points of interest
-      List<PointOfInterest> pointsOfInterest;
+      List<PointOfInterest> pointsOfInterest = new List<PointOfInterest>();
       String jsonString = await rootBundle.loadString('assets/locations_db/locations.json');
       Map parsedJson = json.decode(jsonString);
       
@@ -39,6 +39,7 @@ ThunkAction<AppState> getRemotePointsOfInterest() {
       store.dispatch(new SavePOIsStatusAction(RequestStatus.SUCCESSFUL));
     } catch (e) {
       print("Failed to get POIs info");
+      print(e.toString());
       store.dispatch(new SavePOIsStatusAction(RequestStatus.FAILED));
     }
   };

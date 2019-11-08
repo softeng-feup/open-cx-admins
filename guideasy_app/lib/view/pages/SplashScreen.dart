@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:guideasy_app/constants.dart';
+import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/redux/ActionCreators.dart';
 
 import 'package:guideasy_app/view/widgets/RunningAnimation.dart';
 
@@ -10,8 +13,15 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    StoreProvider.of<AppState>(context).dispatch(getPointsOfInterest());
     return new Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: Column(
