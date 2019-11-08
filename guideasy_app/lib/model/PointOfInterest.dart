@@ -1,12 +1,11 @@
-import 'dart:ffi';
-
 class PointOfInterest {
   int id;
   double latitude;
   double longitude;
   String title;
   String description;
-  String icon;
+  String type;
+  String keyword;
 
   PointOfInterest(
     this.id,
@@ -14,7 +13,8 @@ class PointOfInterest {
     this.longitude,
     this.title,
     this.description,
-    this.icon
+    this.type,
+    this.keyword
   );
 
   factory PointOfInterest.fromJson(Map<String, dynamic> parsedJson) {
@@ -24,7 +24,8 @@ class PointOfInterest {
       parsedJson['longitude'] as double,
       parsedJson['title'] as String,
       parsedJson['description'] as String,
-      parsedJson['icon'] as String
+      parsedJson['type'] as String,
+      parsedJson['keyword'] as String
     );
   }
 
@@ -35,7 +36,8 @@ class PointOfInterest {
       'longitude' : longitude,
       'title': title,
       'description' : description,
-      'icon' : icon
+      'type' : type,
+      'keyword' : keyword
     };
   }
 

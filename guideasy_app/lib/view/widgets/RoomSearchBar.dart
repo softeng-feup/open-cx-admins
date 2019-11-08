@@ -74,7 +74,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              Text(item.position,
+              Text('10m',
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.white
@@ -84,7 +84,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
         );
       },
       itemFilter: (item, query) {
-        bool q1 = item.roomNumber
+        bool q1 = item.title
                       .toLowerCase()
                       .startsWith(query.toLowerCase());
         bool q2 = item.keyword
@@ -93,9 +93,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
         return q1 || q2;
       },
       itemSorter: (a, b) {
-        int aPos = int.parse(a.position.substring(0, a.position.length-2));
-        int bPos = int.parse(b.position.substring(0, b.position.length-2));
-        return aPos.compareTo(bPos);
+        return a.title.compareTo(b.title);
       },
       key: key,
       itemSubmitted: (item) {

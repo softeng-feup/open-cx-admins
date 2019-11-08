@@ -1,23 +1,35 @@
 {
   "locations": [{
-    "keyword": "B001",
     "id" : 1,
-    "roomNumber": "001",
-    "position": "150m"
+    "latitude" : 10.123,
+    "longitude" : 11.123,
+    "title" : "B001",
+    "description" : "first room, very cool",
+    "type" : "room",
+    "keyword": "B001"
   }, {
-    "keyword": "B121",
     "id" : 2,
-    "roomNumber": "121",
-    "position": "10m"
+    "latitude" : 10.123,
+    "longitude" : 11.123,
+    "title" : "B002",
+    "description" : "second room, also cool",
+    "type" : "room",
+    "keyword": "B002"
   }, {
-    "keyword": "Auditorio",
     "id" : 3,
-    "roomNumber": "",
-    "position": "300m"
+    "latitude" : 10.123,
+    "longitude" : 11.123,
+    "title" : "B003",
+    "description" : "third room, not that cool",
+    "type" : "room",
+    "keyword": "B003"
   }, {
-    "keyword": "B123",
     "id" : 4,
-    "roomNumber": "123",
-    "position": "15m"
+    "latitude" : 10.123,
+    "longitude" : 11.123,
+    "title" : "Auditorio",
+    "description" : "auditorio bonito",
+    "type" : "room",
+    "keyword": "Auditorio"
   }]
 }

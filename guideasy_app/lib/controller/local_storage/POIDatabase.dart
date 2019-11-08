@@ -4,7 +4,7 @@ import 'package:sqflite/sqlite_api.dart';
 import 'AppDatabase.dart';
 
 class POIDatabase extends AppDatabase {
-  POIDatabase():super('pois.db', 'CREATE TABLE pois (id INTEGER PRIMARY KEY, latitude REAL, longitude REAL, title TEXT, description TEXT, icon TEXT)');
+  POIDatabase():super('pois.db', 'CREATE TABLE pois (id INTEGER PRIMARY KEY, latitude REAL, longitude REAL, title TEXT, description TEXT, icon TEXT, keyword TEXT)');
 
   saveNewPOIs(List<PointOfInterest> pois) async {
     await _deletePOIs();
@@ -37,7 +37,8 @@ class POIDatabase extends AppDatabase {
         maps[i]['latitude'],
         maps[i]['title'],
         maps[i]['description'],
-        maps[i]['icon']
+        maps[i]['icon'],
+        maps[i]['keyword']
       );
     });
   }
