@@ -12,32 +12,32 @@ class FilterItem extends StatefulWidget {
 }
 
 class FilterItemState extends State<FilterItem> {
-  Color color;
-  bool pressed = false;
+  Color _color;
+  bool _pressed;
 
   @override
   void initState() {
     super.initState();
-
-    color = Colors.transparent;
+    _pressed = false;
+    _color = Colors.transparent;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: color,
+      color: _color,
       child: ListTile(
         leading: widget.icon,
         title: Text(widget.title, style: TextStyle(color: Colors.black,)),
         onTap: () {
           setState(() {
-            if(!pressed) {
-              color = Colors.orangeAccent;
-              pressed = true;
+            if(!_pressed) {
+              _color = Colors.orangeAccent;
+              _pressed = true;
             }
             else {
-              color = Colors.transparent;
-              pressed = false;
+              _color = Colors.transparent;
+              _pressed = false;
             }
           });
         },
