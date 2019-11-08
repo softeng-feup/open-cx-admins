@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:guideasy_app/controller/Routes/SlideTopRoute.dart';
 import 'package:guideasy_app/view/pages/SplashScreen.dart';
 
-import '../../constants.dart';
+import 'package:guideasy_app/constants.dart';
 
 class MapSlideButton extends StatelessWidget {
   @override

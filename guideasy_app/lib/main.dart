@@ -12,7 +12,7 @@ class GuideasyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Guideasy App',
       theme: applicationTheme,
-      initialRoute: mapRoute,
+      initialRoute: splashRoute,
       onGenerateRoute: Router.generateRoute,
     );
   }

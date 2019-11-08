@@ -31,9 +31,4 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
           ),
       );
     }
-    /*return Container(
-      color: Color(0xffffffff),
-      child: ListView(children: divided),
-    );*/
-  //}
 }
