@@ -13,6 +13,7 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
                 height: 88,
                 child: DrawerHeader(
                   child: Text('Filters'),
+                  margin: EdgeInsets.all(0),
                   decoration: BoxDecoration(
                       color: Color(0xffff9900),
                   ),
