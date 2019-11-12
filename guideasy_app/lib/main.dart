@@ -7,7 +7,7 @@ import 'package:redux/redux.dart';
 
 import 'Theme.dart';
 import 'controller/Middleware.dart';
-import 'controller/Routes/Router.dart';
+import 'controller/routes/Router.dart';
 
 final Store<AppState> state = Store<AppState>(
     appReducers, /* Function defined in the reducers file */

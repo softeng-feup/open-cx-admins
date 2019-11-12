@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:guideasy_app/controller/Routes/SlideTopRoute.dart';
+import 'package:guideasy_app/controller/routes/SlideTopRoute.dart';
 import 'package:guideasy_app/view/pages/SplashScreen.dart';
 
 class MapSlideButton extends StatelessWidget {

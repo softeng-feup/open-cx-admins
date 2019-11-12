@@ -14,14 +14,21 @@ class SplashScreen extends StatefulWidget {
 
 class SplashScreenState extends State<SplashScreen> {
 
+  bool _firstBuild;
+
   @override
   void initState() {
+    _firstBuild = true;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    StoreProvider.of<AppState>(context).dispatch(getPointsOfInterest());
+    if (_firstBuild) {
+      _firstBuild = false;
+      StoreProvider.of<AppState>(context).dispatch(getPointsOfInterest());
+    }
+
     return new Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: Column(
