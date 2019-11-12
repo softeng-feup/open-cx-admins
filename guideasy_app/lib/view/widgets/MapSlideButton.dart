@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:guideasy_app/controller/routes/SlideTopRoute.dart';
 import 'package:guideasy_app/view/pages/SplashScreen.dart';
 
+import 'package:guideasy_app/constants.dart';
+
 class MapSlideButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class MapSlideButton extends StatelessWidget {
         onPressed: () {
           FocusScope.of(context).requestFocus(new FocusNode());
 
-          Navigator.push(context, SlideTopRoute(page: new SplashScreen()));
+          Navigator.pushNamed(context, mapRoute);
         },
       ),
     );
