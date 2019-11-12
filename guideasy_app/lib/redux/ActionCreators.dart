@@ -53,6 +53,5 @@ ThunkAction<AppState> updateStateBasedOnLocalPOIs() {
 
     // store points of interest in store
     store.dispatch(new SavePOIsAction(pointsOfInterest));
-    store.dispatch(new SavePOIsStatusAction(RequestStatus.SUCCESSFUL));
   };
 }

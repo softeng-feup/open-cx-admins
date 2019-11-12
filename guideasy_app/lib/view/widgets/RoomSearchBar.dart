@@ -95,10 +95,16 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                 bool q1 = item.title
                     .toLowerCase()
                     .startsWith(query.toLowerCase());
-                bool q2 = item.keyword
+                bool q2 = item.title
+                    .toLowerCase()
+                    .contains(query.toLowerCase());
+                bool q3 = item.keyword
                     .toLowerCase()
                     .startsWith(query.toLowerCase());
-                return q1 || q2;
+                bool q4 = item.keyword
+                    .toLowerCase()
+                    .contains(query.toLowerCase());
+                return q1 || q2 || q3 || q4;
               },
               itemSorter: (a, b) {
                 return a.title.compareTo(b.title);
@@ -106,7 +112,8 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
               key: key,
               itemSubmitted: (item) {
                 setState(() =>
-                searchTextField.textField.controller.text = item.title);
+                  searchTextField.textField.controller.text = item.title
+                );
               },
               suggestions: pointsOfInterest
           );
