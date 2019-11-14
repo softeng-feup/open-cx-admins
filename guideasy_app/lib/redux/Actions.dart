@@ -10,3 +10,9 @@ class SavePOIsStatusAction {
   RequestStatus status;
   SavePOIsStatusAction(this.status);
 }
+
+class UpdateMapFilter {
+  String title;
+  bool selected;
+  UpdateMapFilter(this.title, this.selected);
+}

@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/redux/Actions.dart';
 
 class FilterItem extends StatefulWidget {
   final String title;
@@ -12,36 +15,23 @@ class FilterItem extends StatefulWidget {
 }
 
 class FilterItemState extends State<FilterItem> {
-  Color _color;
-  bool _pressed;
-
-  @override
-  void initState() {
-    super.initState();
-    _pressed = false;
-    _color = Colors.transparent;
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: _color,
-      child: ListTile(
-        leading: widget.icon,
-        title: Text(widget.title, style: TextStyle(color: Colors.black,)),
-        onTap: () {
-          setState(() {
-            if(!_pressed) {
-              _color = Colors.orangeAccent;
-              _pressed = true;
-            }
-            else {
-              _color = Colors.transparent;
-              _pressed = false;
-            }
-          });
-        },
-      ),
+    return StoreConnector<AppState, bool>(
+      converter: (store) => store.state.content[widget.title],
+      builder: (context, selected) {
+        selected = selected == null ? false : selected;
+        return Container(
+            color: selected ? Colors.orangeAccent : Colors.transparent,
+            child: ListTile(
+              leading: widget.icon,
+              title: Text(widget.title, style: TextStyle(color: Colors.black,)),
+              onTap: () {
+                StoreProvider.of<AppState>(context).dispatch(new UpdateMapFilter(widget.title, !selected));
+              }
+            )
+         );
+      }
     );
   }
 }
