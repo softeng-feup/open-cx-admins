@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:guideasy_app/view/widgets/FilterItem.dart';
 
 class FilterBox extends StatelessWidget{//StatefulWidget {
+
+    final VoidCallback onChangeFilter;
+
+    FilterBox({this.onChangeFilter});
+
     @override
     Widget build(BuildContext context) {
       return Drawer(
@@ -19,14 +24,14 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
                   ),
                 ),
               ),
-              FilterItem('WC', Icon(Icons.wc)),
-              FilterItem('Elevators', Icon(Icons.unfold_more)),
-              FilterItem('Stairs', Icon(Icons.show_chart)),
-              FilterItem('Reception', Icon(Icons.room_service)),
-              FilterItem('Lost & Found', Icon(Icons.find_in_page)),
-              FilterItem('Snack Bar', Icon(Icons.restaurant)),
-              FilterItem('Coffee Break', Icon(Icons.local_cafe)),
-              FilterItem('Vending Machine', Icon(Icons.kitchen))
+              FilterItem('WC', 'wc', Icon(Icons.wc), onSelected: this.onChangeFilter),
+              FilterItem('Elevators', 'elevator', Icon(Icons.unfold_more), onSelected: this.onChangeFilter),
+              FilterItem('Stairs', 'stairs', Icon(Icons.show_chart), onSelected: this.onChangeFilter),
+              FilterItem('Reception', 'reception', Icon(Icons.room_service), onSelected: this.onChangeFilter),
+              FilterItem('Lost & Found', 'lost_and_found', Icon(Icons.find_in_page), onSelected: this.onChangeFilter),
+              FilterItem('Snack Bar', 'snack_bar', Icon(Icons.restaurant), onSelected: this.onChangeFilter),
+              FilterItem('Coffee Break', 'coffee_break', Icon(Icons.local_cafe), onSelected: this.onChangeFilter),
+              FilterItem('Vending Machine', 'vending_machine', Icon(Icons.kitchen), onSelected: this.onChangeFilter)
             ],
           ),
       );

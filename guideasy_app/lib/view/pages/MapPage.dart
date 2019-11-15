@@ -59,7 +59,9 @@ class _ConferenceMap extends State<MapPage> {
             label: Text('Recenter Map'),
             icon: Icon(Icons.gps_fixed)
         ),
-        endDrawer: new FilterBox(),
+        endDrawer: new FilterBox(onChangeFilter: () {
+          updateMarkers(context);
+        }),
     );
   }
 
@@ -69,12 +71,15 @@ class _ConferenceMap extends State<MapPage> {
   }
 
   void updateMarkers(BuildContext context) {
-    List<PointOfInterest> pointsOfInterest = StoreProvider.of<AppState>(context).state.content['pointsOfInterest'];
+    final Map content = StoreProvider.of<AppState>(context).state.content;
+    List<PointOfInterest> pointsOfInterest = content['pointsOfInterest'];
 
     setState(() {
       markers.clear();
     });
     pointsOfInterest.forEach((PointOfInterest poi) {
+      if (content[poi.type] != true) return;
+
       MarkerId markerId = MarkerId(poi.id.toString());
       Marker newMarker = Marker(
         markerId: markerId,
@@ -94,4 +99,3 @@ class _ConferenceMap extends State<MapPage> {
 
 //TODO
 // make sure setState is okay
-// call updateMarkers at right times

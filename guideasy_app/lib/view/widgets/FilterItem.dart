@@ -6,9 +6,11 @@ import 'package:guideasy_app/redux/Actions.dart';
 
 class FilterItem extends StatefulWidget {
   final String title;
+  final String type;
   final Icon icon;
+  VoidCallback onSelected;
 
-  FilterItem(this.title, this.icon);
+  FilterItem(this.title, this.type, this.icon, {this.onSelected});
 
   @override
   FilterItemState createState() => FilterItemState();
@@ -18,7 +20,7 @@ class FilterItemState extends State<FilterItem> {
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, bool>(
-      converter: (store) => store.state.content[widget.title],
+      converter: (store) => store.state.content[widget.type],
       builder: (context, selected) {
         selected = selected == null ? false : selected;
         return Container(
@@ -27,7 +29,9 @@ class FilterItemState extends State<FilterItem> {
               leading: widget.icon,
               title: Text(widget.title, style: TextStyle(color: Colors.black,)),
               onTap: () {
-                StoreProvider.of<AppState>(context).dispatch(new UpdateMapFilter(widget.title, !selected));
+                StoreProvider.of<AppState>(context).dispatch(new UpdateMapFilter(widget.type, !selected));
+                if (widget.onSelected != null)
+                  widget.onSelected();
               }
             )
          );

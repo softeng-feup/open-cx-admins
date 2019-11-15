@@ -11,25 +11,25 @@
     "id" : 2,
     "latitude" : 41.17765,
     "longitude" : -8.596625,
-    "title" : "B002",
-    "description" : "second room, also cool",
-    "type" : "room",
-    "keyword": "B002"
+    "title" : "Bathroom",
+    "description" : "not clean, go away",
+    "type" : "wc",
+    "keyword": "bathroom"
   }, {
     "id" : 3,
     "latitude" : 41.17785,
     "longitude" : -8.596625,
-    "title" : "B003",
-    "description" : "third room, not that cool",
-    "type" : "room",
-    "keyword": "B003"
+    "title" : "Elevator",
+    "description" : "going up eh?",
+    "type" : "elevator",
+    "keyword": "elevator"
   }, {
     "id" : 4,
     "latitude" : 41.17795,
     "longitude" : -8.596625,
-    "title" : "Auditorio",
-    "description" : "auditorio bonito",
-    "type" : "room",
-    "keyword": "Auditorio"
+    "title" : "Coffee break room",
+    "description" : "the only thing worth coming to",
+    "type" : "coffee_break",
+    "keyword": "Coffee break"
   }]
 }
