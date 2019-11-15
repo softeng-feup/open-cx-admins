@@ -3,7 +3,10 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:guideasy_app/view/widgets/FilterBox.dart';
 
 class MapPage extends StatefulWidget {
@@ -24,17 +27,6 @@ class _ConferenceMap extends State<MapPage> {
 
   void initState() {
     super.initState();
-
-    MarkerId markerId = MarkerId('1');
-    Marker newMarker = Marker(
-      markerId: markerId,
-      position: LatLng(41.17765, -8.596625),
-      infoWindow: InfoWindow(title: 'Raid de Giratina Shiny', snippet: 'Super legit')
-    );
-
-    setState(() {
-      markers[markerId] = newMarker;
-    });
   }
 
   @override
@@ -55,7 +47,10 @@ class _ConferenceMap extends State<MapPage> {
         ),
         body: GoogleMap(
             mapType: MapType.terrain,
-            onMapCreated: (GoogleMapController controller) => _controller.complete(controller),
+            onMapCreated: (GoogleMapController controller)  {
+              _controller.complete(controller);
+              updateMarkers(context);
+            },
             initialCameraPosition: _eventLocation,
             markers: Set<Marker>.of(markers.values),
         ),
@@ -72,4 +67,31 @@ class _ConferenceMap extends State<MapPage> {
     final GoogleMapController controller = await _controller.future;
     controller.animateCamera(CameraUpdate.newCameraPosition(_eventLocation));
   }
+
+  void updateMarkers(BuildContext context) {
+    List<PointOfInterest> pointsOfInterest = StoreProvider.of<AppState>(context).state.content['pointsOfInterest'];
+
+    setState(() {
+      markers.clear();
+    });
+    pointsOfInterest.forEach((PointOfInterest poi) {
+      MarkerId markerId = MarkerId(poi.id.toString());
+      Marker newMarker = Marker(
+        markerId: markerId,
+        position: LatLng(poi.latitude, poi.longitude),
+        infoWindow: InfoWindow(
+          title: poi.title,
+          snippet: poi.description
+        )
+      );
+
+      setState(() {
+        markers[markerId] = newMarker;
+      });
+    });
+  }
 }
+
+//TODO
+// make sure setState is okay
+// call updateMarkers at right times

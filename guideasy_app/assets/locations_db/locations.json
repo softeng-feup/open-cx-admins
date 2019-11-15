@@ -1,32 +1,32 @@
 {
   "locations": [{
     "id" : 1,
-    "latitude" : 10.123,
-    "longitude" : 11.123,
+    "latitude" : 41.17775,
+    "longitude" : -8.596625,
     "title" : "B001",
     "description" : "first room, very cool",
     "type" : "room",
     "keyword": "B001"
   }, {
     "id" : 2,
-    "latitude" : 10.123,
-    "longitude" : 11.123,
+    "latitude" : 41.17765,
+    "longitude" : -8.596625,
     "title" : "B002",
     "description" : "second room, also cool",
     "type" : "room",
     "keyword": "B002"
   }, {
     "id" : 3,
-    "latitude" : 10.123,
-    "longitude" : 11.123,
+    "latitude" : 41.17785,
+    "longitude" : -8.596625,
     "title" : "B003",
     "description" : "third room, not that cool",
     "type" : "room",
     "keyword": "B003"
   }, {
     "id" : 4,
-    "latitude" : 10.123,
-    "longitude" : 11.123,
+    "latitude" : 41.17795,
+    "longitude" : -8.596625,
     "title" : "Auditorio",
     "description" : "auditorio bonito",
     "type" : "room",
