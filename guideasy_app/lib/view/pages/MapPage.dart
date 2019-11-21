@@ -20,7 +20,7 @@ class _ConferenceMap extends State<MapPage> {
 
   static final CameraPosition _eventLocation = CameraPosition(
     bearing: 105,
-    target: LatLng(41.17765, -8.596625),
+    target: LatLng(41.17785, -8.596625),
     tilt: 0,
     zoom: 18
   );
@@ -46,13 +46,16 @@ class _ConferenceMap extends State<MapPage> {
           backgroundColor: Color(0xffff9900),
         ),
         body: GoogleMap(
-            mapType: MapType.terrain,
-            onMapCreated: (GoogleMapController controller)  {
-              _controller.complete(controller);
-              updateMarkers(context);
-            },
-            initialCameraPosition: _eventLocation,
-            markers: Set<Marker>.of(markers.values),
+          mapType: MapType.terrain,
+          onMapCreated: (GoogleMapController controller)  {
+            _controller.complete(controller);
+            updateMarkers(context);
+          },
+          initialCameraPosition: _eventLocation,
+          markers: Set<Marker>.of(markers.values),
+          myLocationEnabled: true,
+          myLocationButtonEnabled: true,
+          indoorViewEnabled: true
         ),
         floatingActionButton: FloatingActionButton.extended(
             onPressed: _recenterMap,

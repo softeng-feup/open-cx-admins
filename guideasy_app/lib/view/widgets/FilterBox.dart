@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:guideasy_app/model/POIType.dart';
-import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:guideasy_app/view/widgets/FilterItem.dart';
 
 class FilterBox extends StatelessWidget{//StatefulWidget {
