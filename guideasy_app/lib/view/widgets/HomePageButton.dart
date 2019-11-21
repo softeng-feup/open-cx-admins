@@ -30,8 +30,17 @@ class HomePageButton extends StatelessWidget {
             size: 80
           ),
           onPressed: () async {
+            Position position;
+            bool gpsEnabled = await Geolocator().isLocationServiceEnabled();
+            if (gpsEnabled)
+              position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
+            else
+              position = await Geolocator().getLastKnownPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
 
-            Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
+            if (position == null) {
+              print('Could not determine current position');
+              return;
+            }
 
             MapPosition currentPos = MapPosition(position.latitude, position.longitude);
             PointOfInterest target = nearestPOIOfType(currentPos, type, pointsOfInterest);
@@ -40,7 +49,6 @@ class HomePageButton extends StatelessWidget {
               print('did not find any POI of that type');
               return;
             }
-            print(target.title);
 
             Navigator.pushNamed(context, mapRoute);
           },
@@ -49,3 +57,14 @@ class HomePageButton extends StatelessWidget {
     );
   }
 }
+
+/*
+
+TODO
+on button click, if there is a nearest poi:
+- clear filters
+- create map marker for nearest poi
+- zoom to poi for some time and then to person
+
+should start on the person and not on the map defined position
+ */
