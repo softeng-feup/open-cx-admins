@@ -6,7 +6,8 @@ class AppState {
   Map getInitialContent() {
     return {
       "pointsOfInterest" : new List<PointOfInterest>(),
-      "poisStatus" : RequestStatus.NONE
+      "poisStatus" : RequestStatus.NONE,
+      "mapFilters" : new Map<POIType, bool>()
     };
   }
 
@@ -20,6 +21,11 @@ class AppState {
 
   AppState cloneAndUpdateValue(key, value) {
     return new AppState(Map.from(this.content)..[key] = value);
+  }
+
+  AppState cloneAndUpdateMapFilter(POIType filter, bool value) {
+    Map<POIType, bool> newFilters = Map.from(this.content["mapFilters"])..[filter] = value;
+    return new AppState(Map.from(this.content)..["mapFilters"] = newFilters);
   }
 
   AppState getInitialState() {

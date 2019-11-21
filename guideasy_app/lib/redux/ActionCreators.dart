@@ -11,7 +11,7 @@ import 'package:redux/redux.dart';
 ThunkAction<AppState> getPointsOfInterest() {
   return (Store<AppState> store) async {
     store.dispatch(updateStateBasedOnLocalPOIs());
-    store.dispatch(getRemotePointsOfInterest());
+    //store.dispatch(getRemotePointsOfInterest());
   };
 }
 
@@ -51,7 +51,10 @@ ThunkAction<AppState> updateStateBasedOnLocalPOIs() {
     POIDatabase pointsOfInterestDB = POIDatabase();
     List<PointOfInterest> pointsOfInterest = await pointsOfInterestDB.getPOIs();
 
-    // store points of interest in store
-    store.dispatch(new SavePOIsAction(pointsOfInterest));
+    if(pointsOfInterest.length > 0)
+      // store points of interest in store
+      store.dispatch(new SavePOIsAction(pointsOfInterest));
+    else
+      print("No POI info stored locally");
   };
 }

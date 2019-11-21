@@ -4,8 +4,8 @@ class PointOfInterest {
   double longitude;
   String title;
   String description;
-  String type;
   String keyword;
+  POIType type;
 
   PointOfInterest(
     this.id,
@@ -13,8 +13,8 @@ class PointOfInterest {
     this.longitude,
     this.title,
     this.description,
-    this.type,
-    this.keyword
+    this.keyword,
+    this.type
   );
 
   factory PointOfInterest.fromJson(Map<String, dynamic> parsedJson) {
@@ -24,8 +24,8 @@ class PointOfInterest {
       parsedJson['longitude'] as double,
       parsedJson['title'] as String,
       parsedJson['description'] as String,
-      parsedJson['type'] as String,
-      parsedJson['keyword'] as String
+      parsedJson['keyword'] as String,
+      stringToPOIType(parsedJson['type'])
     );
   }
 
@@ -36,9 +36,47 @@ class PointOfInterest {
       'longitude' : longitude,
       'title': title,
       'description' : description,
-      'type' : type,
-      'keyword' : keyword
+      'keyword' : keyword,
+      'type' : type.index
     };
   }
 
+}
+
+enum POIType {
+    STAIRS,
+    ELEVATOR,
+    WC,
+    RECEPTION,
+    LOST_AND_FOUND,
+    SNACK_BAR,
+    COFFEE_BREAK,
+    VENDING_MACHINE,
+    ROOM,
+    UNDEFINED
+}
+
+POIType stringToPOIType(String type) {
+  switch(type) {
+    case 'room':
+      return POIType.ROOM;
+    case 'stairs':
+      return POIType.STAIRS;
+    case 'elevator':
+      return POIType.ELEVATOR;
+    case 'wc':
+      return POIType.WC;
+    case 'reception':
+      return POIType.RECEPTION;
+    case 'lost and found':
+      return POIType.LOST_AND_FOUND;
+    case 'snack bar':
+      return POIType.SNACK_BAR;
+    case 'coffee break':
+      return POIType.COFFEE_BREAK;
+    case 'vending machine':
+      return POIType.VENDING_MACHINE;
+    default:
+      return POIType.UNDEFINED;
+  }
 }

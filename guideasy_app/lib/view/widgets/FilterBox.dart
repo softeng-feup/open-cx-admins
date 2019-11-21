@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:guideasy_app/view/widgets/FilterItem.dart';
 
 class FilterBox extends StatelessWidget{//StatefulWidget {
@@ -24,14 +25,14 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
                   ),
                 ),
               ),
-              FilterItem('WC', 'wc', Icon(Icons.wc), onSelected: this.onChangeFilter),
-              FilterItem('Elevators', 'elevator', Icon(Icons.unfold_more), onSelected: this.onChangeFilter),
-              FilterItem('Stairs', 'stairs', Icon(Icons.show_chart), onSelected: this.onChangeFilter),
-              FilterItem('Reception', 'reception', Icon(Icons.room_service), onSelected: this.onChangeFilter),
-              FilterItem('Lost & Found', 'lost_and_found', Icon(Icons.find_in_page), onSelected: this.onChangeFilter),
-              FilterItem('Snack Bar', 'snack_bar', Icon(Icons.restaurant), onSelected: this.onChangeFilter),
-              FilterItem('Coffee Break', 'coffee_break', Icon(Icons.local_cafe), onSelected: this.onChangeFilter),
-              FilterItem('Vending Machine', 'vending_machine', Icon(Icons.kitchen), onSelected: this.onChangeFilter)
+              FilterItem('WC', POIType.WC, Icon(Icons.wc), onSelected: this.onChangeFilter),
+              FilterItem('Elevators', POIType.ELEVATOR, Icon(Icons.unfold_more), onSelected: this.onChangeFilter),
+              FilterItem('Stairs', POIType.STAIRS, Icon(Icons.show_chart), onSelected: this.onChangeFilter),
+              FilterItem('Reception', POIType.RECEPTION, Icon(Icons.room_service), onSelected: this.onChangeFilter),
+              FilterItem('Lost & Found', POIType.LOST_AND_FOUND, Icon(Icons.find_in_page), onSelected: this.onChangeFilter),
+              FilterItem('Snack Bar', POIType.SNACK_BAR, Icon(Icons.restaurant), onSelected: this.onChangeFilter),
+              FilterItem('Coffee Break', POIType.COFFEE_BREAK, Icon(Icons.local_cafe), onSelected: this.onChangeFilter),
+              FilterItem('Vending Machine', POIType.VENDING_MACHINE, Icon(Icons.kitchen), onSelected: this.onChangeFilter)
             ],
           ),
       );

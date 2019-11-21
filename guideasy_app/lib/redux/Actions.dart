@@ -12,7 +12,7 @@ class SavePOIsStatusAction {
 }
 
 class UpdateMapFilter {
-  String title;
+  POIType type;
   bool selected;
-  UpdateMapFilter(this.title, this.selected);
+  UpdateMapFilter(this.type, this.selected);
 }

@@ -78,7 +78,7 @@ class _ConferenceMap extends State<MapPage> {
       markers.clear();
     });
     pointsOfInterest.forEach((PointOfInterest poi) {
-      if (content[poi.type] != true) return;
+      if (content['mapFilters'][poi.type] != true) return;
 
       MarkerId markerId = MarkerId(poi.id.toString());
       Marker newMarker = Marker(

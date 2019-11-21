@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:guideasy_app/redux/Actions.dart';
 
 class FilterItem extends StatefulWidget {
   final String title;
-  final String type;
   final Icon icon;
+  final POIType type;
   VoidCallback onSelected;
 
   FilterItem(this.title, this.type, this.icon, {this.onSelected});
@@ -20,7 +21,7 @@ class FilterItemState extends State<FilterItem> {
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, bool>(
-      converter: (store) => store.state.content[widget.type],
+      converter: (store) => store.state.content["mapFilters"][widget.type],
       builder: (context, selected) {
         selected = selected == null ? false : selected;
         return Container(

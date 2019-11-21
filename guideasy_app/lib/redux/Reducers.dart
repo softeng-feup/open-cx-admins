@@ -25,6 +25,6 @@ AppState setPOIsStatus(AppState state, SavePOIsStatusAction action) {
 }
 
 AppState setMapFilter(AppState state, UpdateMapFilter action) {
-  print('setting ' + action.title + ' filter to ' + action.selected.toString());
-  return state.cloneAndUpdateValue(action.title, action.selected);
+  print('setting ' + action.type.toString() + ' filter to ' + action.selected.toString());
+  return state.cloneAndUpdateMapFilter(action.type, action.selected);
 }

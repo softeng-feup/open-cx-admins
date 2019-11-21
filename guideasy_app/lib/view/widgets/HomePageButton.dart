@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guideasy_app/constants.dart';
 
 class HomePageButton extends StatelessWidget {
   final IconData icon;
@@ -22,6 +23,7 @@ class HomePageButton extends StatelessWidget {
         FocusScope.of(context).requestFocus(new FocusNode());
 
         print("Clicked navigation button");
+        Navigator.pushNamed(context, mapRoute);
       },
     );
   }
