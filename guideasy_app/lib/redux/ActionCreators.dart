@@ -11,7 +11,7 @@ import 'package:redux/redux.dart';
 ThunkAction<AppState> getPointsOfInterest() {
   return (Store<AppState> store) async {
     store.dispatch(updateStateBasedOnLocalPOIs());
-    //store.dispatch(getRemotePointsOfInterest());
+    store.dispatch(getRemotePointsOfInterest());
   };
 }
 

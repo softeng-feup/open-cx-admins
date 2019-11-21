@@ -1,4 +1,5 @@
 import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/model/POIType.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
 
 class SavePOIsAction {
@@ -11,8 +12,13 @@ class SavePOIsStatusAction {
   SavePOIsStatusAction(this.status);
 }
 
-class UpdateMapFilter {
+class UpdateMapFilterAction {
   POIType type;
   bool selected;
-  UpdateMapFilter(this.type, this.selected);
+  UpdateMapFilterAction(this.type, this.selected);
+}
+
+class UpdateMapFiltersAction {
+  Map<POIType, bool> mapFilters;
+  UpdateMapFiltersAction(this.mapFilters);
 }

@@ -9,8 +9,11 @@ AppState appReducers(AppState state, dynamic action) {
   else if (action is SavePOIsStatusAction) {
     return setPOIsStatus(state, action);
   }
-  else if (action is UpdateMapFilter) {
+  else if (action is UpdateMapFilterAction) {
     return setMapFilter(state, action);
+  }
+  else if (action is UpdateMapFiltersAction) {
+    return updateMapFilters(state, action);
   }
   return state;
 }
@@ -24,7 +27,12 @@ AppState setPOIsStatus(AppState state, SavePOIsStatusAction action) {
   return state.cloneAndUpdateValue('poisStatus', action.status);
 }
 
-AppState setMapFilter(AppState state, UpdateMapFilter action) {
+AppState setMapFilter(AppState state, UpdateMapFilterAction action) {
   print('setting ' + action.type.toString() + ' filter to ' + action.selected.toString());
   return state.cloneAndUpdateMapFilter(action.type, action.selected);
+}
+
+AppState updateMapFilters(AppState state, UpdateMapFiltersAction action) {
+  print('updating map filters');
+  return state.cloneAndUpdateValue('mapFilters', action.mapFilters);
 }

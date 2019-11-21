@@ -1,3 +1,4 @@
+import 'package:guideasy_app/model/POIType.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:sqflite/sqlite_api.dart';
 

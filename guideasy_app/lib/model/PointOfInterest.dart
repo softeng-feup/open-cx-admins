@@ -1,3 +1,5 @@
+import 'package:guideasy_app/model/POIType.dart';
+
 class PointOfInterest {
   int id;
   double latitude;
@@ -41,42 +43,4 @@ class PointOfInterest {
     };
   }
 
-}
-
-enum POIType {
-    STAIRS,
-    ELEVATOR,
-    WC,
-    RECEPTION,
-    LOST_AND_FOUND,
-    SNACK_BAR,
-    COFFEE_BREAK,
-    VENDING_MACHINE,
-    ROOM,
-    UNDEFINED
-}
-
-POIType stringToPOIType(String type) {
-  switch(type) {
-    case 'room':
-      return POIType.ROOM;
-    case 'stairs':
-      return POIType.STAIRS;
-    case 'elevator':
-      return POIType.ELEVATOR;
-    case 'wc':
-      return POIType.WC;
-    case 'reception':
-      return POIType.RECEPTION;
-    case 'lost and found':
-      return POIType.LOST_AND_FOUND;
-    case 'snack bar':
-      return POIType.SNACK_BAR;
-    case 'coffee break':
-      return POIType.COFFEE_BREAK;
-    case 'vending machine':
-      return POIType.VENDING_MACHINE;
-    default:
-      return POIType.UNDEFINED;
-  }
 }

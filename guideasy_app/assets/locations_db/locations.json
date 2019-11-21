@@ -26,10 +26,27 @@
   }, {
     "id" : 4,
     "latitude" : 41.17795,
-    "longitude" : -8.596625,
+    "longitude" : -8.596695,
     "title" : "Coffee break room",
     "description" : "the only thing worth coming to",
     "type" : "coffee break",
     "keyword": "Coffee break"
-  }]
+  }, {
+    "id" : 5,
+    "latitude" : 41.17805,
+    "longitude" : -8.596625,
+    "title" : "Mid coffee break",
+    "description" : "the only thing worth coming to",
+    "type" : "coffee break",
+    "keyword": "Coffee break"
+  }, {
+    "id" : 6,
+    "latitude" : 41.17815,
+    "longitude" : -8.596675,
+    "title" : "Farthest coffee break",
+    "description" : "the only thing worth coming to",
+    "type" : "coffee break",
+    "keyword": "Coffee break"
+  }
+  ]
 }
