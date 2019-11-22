@@ -50,21 +50,13 @@ class HomePageButton extends StatelessWidget {
               return;
             }
 
-            Navigator.pushNamed(context, mapRoute);
+            Navigator.pushNamed(
+                context,
+                mapRoute,
+                arguments: target);
           },
         );
       }
     );
   }
 }
-
-/*
-
-TODO
-on button click, if there is a nearest poi:
-- clear filters
-- create map marker for nearest poi
-- zoom to poi for some time and then to person
-
-should start on the person and not on the map defined position
- */
