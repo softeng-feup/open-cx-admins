@@ -73,6 +73,9 @@ flutter:
         - asset: fonts/Roboto-Light.ttf
         - asset: fonts/Roboto-Medium.ttf
         - asset: fonts/Roboto-Thin.ttf
+    - family:  GuideasyIcons
+      fonts:
+        - asset: fonts/GuideasyIcons.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
