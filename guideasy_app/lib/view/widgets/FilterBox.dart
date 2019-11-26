@@ -25,7 +25,7 @@ class FilterBox extends StatelessWidget{//StatefulWidget {
                   ),
                 ),
               ),
-              FilterItem('WC', POIType.WC, onSelected: this.onChangeFilter),
+              FilterItem('WC', POIType.MALE_WC, onSelected: this.onChangeFilter),
               FilterItem('Elevators', POIType.ELEVATOR, onSelected: this.onChangeFilter),
               FilterItem('Stairs', POIType.STAIRS, onSelected: this.onChangeFilter),
               FilterItem('Reception', POIType.RECEPTION, onSelected: this.onChangeFilter),

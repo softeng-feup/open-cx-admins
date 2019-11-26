@@ -1,52 +1,45 @@
 {
-  "locations": [{
-    "id" : 1,
-    "latitude" : 41.17775,
-    "longitude" : -8.596625,
-    "title" : "B001",
-    "description" : "first room, very cool",
-    "type" : "room",
-    "keyword": "B001"
-  }, {
-    "id" : 2,
-    "latitude" : 41.17765,
-    "longitude" : -8.596625,
-    "title" : "Bathroom",
-    "description" : "not clean, go away",
-    "type" : "wc",
-    "keyword": "bathroom"
-  }, {
-    "id" : 3,
-    "latitude" : 41.17785,
-    "longitude" : -8.596625,
-    "title" : "Elevator",
-    "description" : "going up eh?",
-    "type" : "elevator",
-    "keyword": "elevator"
-  }, {
-    "id" : 4,
-    "latitude" : 41.17795,
-    "longitude" : -8.596695,
-    "title" : "Coffee break room",
-    "description" : "the only thing worth coming to",
-    "type" : "coffee break",
-    "keyword": "Coffee break"
-  }, {
-    "id" : 5,
-    "latitude" : 41.17805,
-    "longitude" : -8.596625,
-    "title" : "Mid coffee break",
-    "description" : "the only thing worth coming to",
-    "type" : "coffee break",
-    "keyword": "Coffee break"
-  }, {
-    "id" : 6,
-    "latitude" : 41.17815,
-    "longitude" : -8.596675,
-    "title" : "Farthest coffee break",
-    "description" : "the only thing worth coming to",
-    "type" : "coffee break",
-    "keyword": "Coffee break"
-  }
+  "locations": [
+    {
+      "id" : 1,
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "Receção",
+      "description" : "Local do check-in.",
+      "type" : "reception",
+      "keyword": "Recepção",
+      "floor": 0
+    },
+
+    {
+      "id" : 2,
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "Auditório",
+      "description" : "Auditório principal do evento.",
+      "type" : "room",
+      "keyword": "Auditorio",
+      "floor": 0
+    },
+    {
+      "id" : 3,
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B232C",
+      "description" : "Auditório principal do evento.",
+      "type" : "room",
+      "keyword": "Auditorio",
+      "floor": 0
+    },
+    {
+      "id" : 4,
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "",
+      "description" : "Auditório principal do evento.",
+      "type" : "room",
+      "keyword": "Auditorio",
+      "floor": 0
+    }
   ]
 }

@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 30,
               crossAxisCount: 3,
               children: <Widget>[
-                HomePageButton(POIType.WC),
+                HomePageButton(POIType.MALE_WC),
                 HomePageButton(POIType.ELEVATOR),
                 HomePageButton(POIType.STAIRS),
                 HomePageButton(POIType.SNACK_BAR),

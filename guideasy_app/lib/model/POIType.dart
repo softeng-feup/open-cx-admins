@@ -7,13 +7,16 @@ import 'package:flutter/material.dart';
 enum POIType {
   STAIRS,
   ELEVATOR,
-  WC,
+  MALE_WC,
+  FEMALE_WC,
+  ACCESS_WC,
   RECEPTION,
   LOST_AND_FOUND,
   SNACK_BAR,
   COFFEE_BREAK,
   VENDING_MACHINE,
   ROOM,
+  PARKING,
   UNDEFINED
 }
 
@@ -25,8 +28,12 @@ POIType stringToPOIType(String type) {
       return POIType.STAIRS;
     case 'elevator':
       return POIType.ELEVATOR;
-    case 'wc':
-      return POIType.WC;
+    case 'male wc':
+      return POIType.MALE_WC;
+    case 'female wc':
+      return POIType.FEMALE_WC;
+    case 'accessible wc':
+      return POIType.ACCESS_WC;
     case 'reception':
       return POIType.RECEPTION;
     case 'lost and found':
@@ -37,6 +44,8 @@ POIType stringToPOIType(String type) {
       return POIType.COFFEE_BREAK;
     case 'vending machine':
       return POIType.VENDING_MACHINE;
+    case 'parking':
+      return POIType.PARKING;
     default:
       return POIType.UNDEFINED;
   }
@@ -48,31 +57,28 @@ IconData poiTypeIcon(POIType type) {
       return Icons.room;
     case POIType.STAIRS:
       return Icons.show_chart;
-      break;
     case POIType.ELEVATOR:
       return Icons.unfold_more;
-      break;
-    case POIType.WC:
+    case POIType.MALE_WC:
       return Icons.wc;
-      break;
+    case POIType.FEMALE_WC:
+      return Icons.wc;
+    case POIType.ACCESS_WC:
+      return Icons.wc;
     case POIType.RECEPTION:
       return Icons.room_service;
-      break;
     case POIType.LOST_AND_FOUND:
       return Icons.find_in_page;
-      break;
     case POIType.SNACK_BAR:
       return Icons.restaurant;
-      break;
     case POIType.COFFEE_BREAK:
       return Icons.local_cafe;
-      break;
     case POIType.VENDING_MACHINE:
       return Icons.kitchen;
-      break;
+    case POIType.PARKING:
+      return Icons.local_parking;
     case POIType.UNDEFINED:
       return Icons.help;
-      break;
     default:
       return Icons.help;
   }
