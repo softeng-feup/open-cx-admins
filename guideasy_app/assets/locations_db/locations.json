@@ -1,45 +1,131 @@
 {
   "locations": [
     {
-      "id" : 1,
       "latitude" : 41.17775,
       "longitude" : -8.596625,
-      "title" : "Receção",
-      "description" : "Local do check-in.",
+      "title" : "Reception",
+      "description" : "Come here for the check-in.",
       "type" : "reception",
-      "keyword": "Recepção",
+      "keyword": "Receção",
       "floor": 0
     },
 
     {
-      "id" : 2,
       "latitude" : 41.17775,
       "longitude" : -8.596625,
-      "title" : "Auditório",
-      "description" : "Auditório principal do evento.",
+      "title" : "Auditorium",
+      "description" : "Event's main auditorium.",
       "type" : "room",
       "keyword": "Auditorio",
       "floor": 0
     },
     {
-      "id" : 3,
       "latitude" : 41.17775,
       "longitude" : -8.596625,
       "title" : "B232C",
-      "description" : "Auditório principal do evento.",
+      "description" : "Workshop Room.",
       "type" : "room",
-      "keyword": "Auditorio",
+      "keyword": "232C",
+      "floor": 2
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B229",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "229",
+      "floor": 2
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B336",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "336",
+      "floor": 3
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B113",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "113",
+      "floor": 1
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B110",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "110",
+      "floor": 1
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B111",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "111",
+      "floor": 1
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B237",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "237",
+      "floor": 2
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B105",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "105",
+      "floor": 1
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B001",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "001",
       "floor": 0
     },
     {
-      "id" : 4,
       "latitude" : 41.17775,
       "longitude" : -8.596625,
-      "title" : "",
-      "description" : "Auditório principal do evento.",
+      "title" : "B002",
+      "description" : "Workshop Room.",
       "type" : "room",
-      "keyword": "Auditorio",
+      "keyword": "002",
       "floor": 0
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "B003",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "003",
+      "floor": 0
+    },
+    {
+      "latitude" : 41.17775,
+      "longitude" : -8.596625,
+      "title" : "I-105",
+      "description" : "Workshop Room.",
+      "type" : "room",
+      "keyword": "105",
+      "floor": 1
     }
   ]
 }

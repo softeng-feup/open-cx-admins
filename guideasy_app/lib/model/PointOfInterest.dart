@@ -21,9 +21,9 @@ class PointOfInterest {
     this.floor
   );
 
-  factory PointOfInterest.fromJson(Map<String, dynamic> parsedJson) {
+  factory PointOfInterest.fromJson(int id, Map<String, dynamic> parsedJson) {
     return PointOfInterest(
-      parsedJson['id'],
+      id,
       parsedJson['latitude'] as double,
       parsedJson['longitude'] as double,
       parsedJson['title'] as String,
