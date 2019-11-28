@@ -13,7 +13,7 @@ class HomePageButton extends StatelessWidget {
   final IconData icon;
   final POIType type;
 
-  HomePageButton(this.type) : icon = poiTypeIcon(type);
+  HomePageButton(this.type, {Key key}) : icon = poiTypeIcon(type), super(key:key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,13 @@ class HomePageButton extends StatelessWidget {
           color: Colors.white,
           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
           shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10)),
-          child: Icon(
-            icon,
-            color: Theme.of(context).backgroundColor,
-            size: 80
+          child: Tooltip(
+            message: "Find nearest",
+            child: Icon(
+              icon,
+              color: Theme.of(context).backgroundColor,
+              size: 80
+            ),
           ),
           onPressed: () async {
             Position position;

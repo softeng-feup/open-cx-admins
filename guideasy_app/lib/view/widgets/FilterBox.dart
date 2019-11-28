@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:guideasy_app/model/POIType.dart';
 import 'package:guideasy_app/view/widgets/FilterItem.dart';
 
-class FilterBox extends StatelessWidget{//StatefulWidget {
+class FilterBox extends StatelessWidget{
 
     final VoidCallback onChangeFilter;
 
-    FilterBox({this.onChangeFilter});
+    FilterBox({Key key, this.onChangeFilter}) : super(key: key);
 
     @override
     Widget build(BuildContext context) {
       return Drawer(
+          key: const Key("map filters"),
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
