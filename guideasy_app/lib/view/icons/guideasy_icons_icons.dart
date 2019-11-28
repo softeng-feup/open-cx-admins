@@ -26,6 +26,7 @@ class GuideasyIcons {
 
   static const IconData room = const IconData(0xe800, fontFamily: _kFontFam);
   static const IconData coffee = const IconData(0xe801, fontFamily: _kFontFam);
+  static const IconData stairs = const IconData(0xe802, fontFamily: _kFontFam);
   static const IconData concierge_bell_solid = const IconData(0xe803, fontFamily: _kFontFam);
   static const IconData lostandfound = const IconData(0xe804, fontFamily: _kFontFam);
   static const IconData elevator = const IconData(0xe806, fontFamily: _kFontFam);

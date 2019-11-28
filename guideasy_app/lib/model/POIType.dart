@@ -8,13 +8,16 @@ import 'package:guideasy_app/view/icons/guideasy_icons_icons.dart';
 enum POIType {
   STAIRS,
   ELEVATOR,
-  WC,
+  MALE_WC,
+  FEMALE_WC,
+  ACCESS_WC,
   RECEPTION,
   LOST_AND_FOUND,
   SNACK_BAR,
   COFFEE_BREAK,
   VENDING_MACHINE,
   ROOM,
+  PARKING,
   UNDEFINED
 }
 
@@ -26,8 +29,12 @@ POIType stringToPOIType(String type) {
       return POIType.STAIRS;
     case 'elevator':
       return POIType.ELEVATOR;
-    case 'wc':
-      return POIType.WC;
+    case 'male wc':
+      return POIType.MALE_WC;
+    case 'female wc':
+      return POIType.FEMALE_WC;
+    case 'accessible wc':
+      return POIType.ACCESS_WC;
     case 'reception':
       return POIType.RECEPTION;
     case 'lost and found':
@@ -38,6 +45,8 @@ POIType stringToPOIType(String type) {
       return POIType.COFFEE_BREAK;
     case 'vending machine':
       return POIType.VENDING_MACHINE;
+    case 'parking':
+      return POIType.PARKING;
     default:
       return POIType.UNDEFINED;
   }
@@ -48,32 +57,27 @@ IconData poiTypeIcon(POIType type) {
     case POIType.ROOM:
       return GuideasyIcons.room;
     case POIType.STAIRS:
-      return GuideasyIcons.female;
-      break;
+      return GuideasyIcons.stairs;
     case POIType.ELEVATOR:
       return GuideasyIcons.elevator;
-      break;
-    case POIType.WC:
+    case POIType.MALE_WC:
       return GuideasyIcons.male;
-      break;
+    case POIType.FEMALE_WC:
+      return GuideasyIcons.female;
+    case POIType.ACCESS_WC:
+      return GuideasyIcons.wheelchair;
     case POIType.RECEPTION:
       return GuideasyIcons.concierge_bell_solid;
-      break;
     case POIType.LOST_AND_FOUND:
       return GuideasyIcons.lostandfound;
-      break;
-    case POIType.SNACK_BAR:
-      return GuideasyIcons.wheelchair;
-      break;
     case POIType.COFFEE_BREAK:
       return GuideasyIcons.coffee;
-      break;
     case POIType.VENDING_MACHINE:
       return GuideasyIcons.vending_machine;
-      break;
+    case POIType.PARKING:
+      return Icons.local_parking;
     case POIType.UNDEFINED:
       return Icons.help;
-      break;
     default:
       return Icons.help;
   }
