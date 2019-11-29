@@ -29,6 +29,7 @@ class SplashScreenState extends State<SplashScreen> {
       },
       builder: (context, callback) =>
        new Scaffold(
+        key: const Key("Splash page"),
         backgroundColor: Theme.of(context).backgroundColor,
         body: Column(
           children: <Widget>[
