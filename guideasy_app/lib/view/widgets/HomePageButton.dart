@@ -17,6 +17,8 @@ class HomePageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData media = MediaQuery.of(context);
+    var size = media.size;
     return StoreConnector<AppState, List<PointOfInterest>>(
       converter: (store) => store.state.content["pointsOfInterest"],
       builder: (context, pointsOfInterest) {
@@ -27,7 +29,7 @@ class HomePageButton extends StatelessWidget {
           child: Icon(
             icon,
             color: Theme.of(context).backgroundColor,
-            size: 80
+            size: size.width/6
           ),
           onPressed: () async {
             Position position;
