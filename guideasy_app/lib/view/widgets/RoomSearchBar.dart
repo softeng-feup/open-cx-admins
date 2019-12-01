@@ -2,6 +2,10 @@ import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:guideasy_app/constants.dart';
+import 'package:guideasy_app/controller/map_navigation/MapNavigation.dart';
+import 'package:guideasy_app/controller/map_navigation/MapPosition.dart';
 import 'package:guideasy_app/model/AppState.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
 
@@ -118,6 +122,12 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                 setState(() =>
                   searchTextField.textField.controller.text = item.title
                 );
+
+                PointOfInterest target = item;
+                Navigator.pushNamed(
+                  context,
+                  mapRoute,
+                  arguments: target);
               },
               suggestions: pointsOfInterest
           );
@@ -126,7 +136,3 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
     );
   }
 }
-
-// TODO problems with searchTextField
-// thunk action being called in build
-// thunk action being called multiple times

@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return Scaffold(
+      key: const Key("Home page"),
       resizeToAvoidBottomPadding: false,
       backgroundColor: Color(0xffff9900),
       appBar: AppBar(
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
                 HomePageButton(POIType.ACCESS_WC),
                 HomePageButton(POIType.FEMALE_WC),
                 HomePageButton(POIType.ELEVATOR),
-                HomePageButton(POIType.COFFEE_BREAK),
+                HomePageButton(POIType.COFFEE_BREAK, key: const Key("nearest poi button")),
                 HomePageButton(POIType.VENDING_MACHINE),
                 HomePageButton(POIType.LOST_AND_FOUND),
                 HomePageButton(POIType.ROOM),
@@ -66,7 +67,10 @@ class HomePage extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: MapSlideButton(),
+            child: Tooltip(
+              message: "Open event map",
+              child: MapSlideButton(key: const Key("map slide button"))
+            ),
           )
         ],
       ),
