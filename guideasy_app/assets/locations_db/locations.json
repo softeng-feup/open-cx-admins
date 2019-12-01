@@ -1,8 +1,8 @@
 {
   "locations": [
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.178023,
+      "longitude" : -8.597781,
       "title" : "Reception",
       "description" : "Come here for the check-in.",
       "type" : "reception",
@@ -11,17 +11,17 @@
     },
 
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.178292,
+      "longitude" :  -8.597841,
       "title" : "Auditorium",
       "description" : "Event's main auditorium.",
       "type" : "room",
       "keyword": "Auditorio",
-      "floor": 0
+      "floor": 1
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177662,
+      "longitude" : -8.597250,
       "title" : "B232C",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -29,8 +29,8 @@
       "floor": 2
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177621,
+      "longitude" : -8.596790,
       "title" : "B229",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -38,8 +38,8 @@
       "floor": 2
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177621,
+      "longitude" : -8.596790,
       "title" : "B336",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -47,7 +47,7 @@
       "floor": 3
     },
     {
-      "latitude" : 41.17775,
+      "latitude" : 41.177559,
       "longitude" : -8.596625,
       "title" : "B113",
       "description" : "Workshop Room.",
@@ -56,8 +56,8 @@
       "floor": 1
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177567,
+      "longitude" : -8.596350,
       "title" : "B110",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -65,8 +65,8 @@
       "floor": 1
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177517,
+      "longitude" : -8.596053,
       "title" : "B111",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -74,8 +74,8 @@
       "floor": 1
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177505,
+      "longitude" : -8.595954,
       "title" : "B237",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -83,8 +83,8 @@
       "floor": 2
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177348,
+      "longitude" : -8.595565,
       "title" : "B105",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -126,6 +126,15 @@
       "type" : "room",
       "keyword": "105",
       "floor": 1
+    },
+    {
+      "latitude" : 41.177598,
+      "longitude" : -8.595825,
+      "title" : "Coffee break room",
+      "description" : "the only thing worth coming to",
+      "type" : "coffee break",
+      "keyword": "Coffee break",
+      "floor": 0
     }
   ]
 }
