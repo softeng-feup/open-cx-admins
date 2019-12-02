@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:guideasy_app/controller/routes/SlideTopRoute.dart';
-import 'package:guideasy_app/view/pages/SplashScreen.dart';
 
 import 'package:guideasy_app/constants.dart';
 
 class MapSlideButton extends StatelessWidget {
+
+  MapSlideButton({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox.expand(

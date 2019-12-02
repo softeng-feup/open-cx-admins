@@ -24,7 +24,7 @@ class _ConferenceMap extends State<MapPage> {
   Map<MarkerId, Marker> markers = <MarkerId, Marker>{};
 
   static final CameraPosition _eventLocation = CameraPosition(
-    bearing: 105,
+    bearing: 0,
     target: LatLng(41.17785, -8.596625),
     tilt: 0,
     zoom: 18
@@ -39,6 +39,7 @@ class _ConferenceMap extends State<MapPage> {
     ThemeData theme = Theme.of(context);
 
     return Scaffold(
+        key: const Key("Map page"),
         resizeToAvoidBottomPadding: false,
         backgroundColor: Color(0xffff9900),
         appBar: AppBar(
@@ -77,9 +78,14 @@ class _ConferenceMap extends State<MapPage> {
             label: Text('Recenter Map'),
             icon: Icon(Icons.gps_fixed)
         ),
-        endDrawer: new FilterBox(onChangeFilter: () {
-          updateMarkers(context);
-        }),
+        endDrawer: Tooltip(
+          message: "Map filters",
+          child: new FilterBox(
+            //key: const Key("map filters button"),
+              onChangeFilter: () {
+                updateMarkers(context);
+              })
+        )
     );
   }
 

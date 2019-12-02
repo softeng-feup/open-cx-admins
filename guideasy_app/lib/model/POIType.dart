@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guideasy_app/view/icons/guideasy_icons_icons.dart';
 
 // TODO decide on better POIs
 enum POIType {
@@ -54,27 +55,25 @@ POIType stringToPOIType(String type) {
 IconData poiTypeIcon(POIType type) {
   switch(type) {
     case POIType.ROOM:
-      return Icons.room;
+      return GuideasyIcons.room;
     case POIType.STAIRS:
-      return Icons.show_chart;
+      return GuideasyIcons.stairs;
     case POIType.ELEVATOR:
-      return Icons.unfold_more;
+      return GuideasyIcons.elevator;
     case POIType.MALE_WC:
-      return Icons.wc;
+      return GuideasyIcons.male;
     case POIType.FEMALE_WC:
-      return Icons.wc;
+      return GuideasyIcons.female;
     case POIType.ACCESS_WC:
-      return Icons.wc;
+      return GuideasyIcons.wheelchair;
     case POIType.RECEPTION:
-      return Icons.room_service;
+      return GuideasyIcons.concierge_bell_solid;
     case POIType.LOST_AND_FOUND:
-      return Icons.find_in_page;
-    case POIType.SNACK_BAR:
-      return Icons.restaurant;
+      return GuideasyIcons.lostandfound;
     case POIType.COFFEE_BREAK:
-      return Icons.local_cafe;
+      return GuideasyIcons.coffee;
     case POIType.VENDING_MACHINE:
-      return Icons.kitchen;
+      return GuideasyIcons.vending_machine;
     case POIType.PARKING:
       return Icons.local_parking;
     case POIType.UNDEFINED:

@@ -66,14 +66,18 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
               itemBuilder: (context, item) {
                 return Container(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  constraints: BoxConstraints(
+                      minWidth: 100.0,
+                      minHeight: 70.0
+                  ),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(
+                      /* borderRadius: BorderRadius.horizontal(
                           left: Radius.circular(20),
-                          right: Radius.circular(20)),
-                      color: Colors.deepOrangeAccent,
+                          right: Radius.circular(20)),*/
+                      color: Colors.orangeAccent,
                       border: Border.all(
-                          color: Colors.black,
-                          width: 1
+                          color: Colors.orange,
+                          width: 2
                       )
                   ),
                   child: Row(

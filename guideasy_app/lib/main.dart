@@ -15,7 +15,7 @@ final Store<AppState> state = Store<AppState>(
     middleware: [generalMiddleware]
 );
 
-void main() => runApp(GuideasyApp());
+void main() => runApp(new GuideasyApp());
 
 class GuideasyApp extends StatelessWidget {
 
