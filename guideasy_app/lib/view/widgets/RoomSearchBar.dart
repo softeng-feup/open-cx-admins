@@ -7,7 +7,10 @@ import 'package:guideasy_app/constants.dart';
 import 'package:guideasy_app/controller/map_navigation/MapNavigation.dart';
 import 'package:guideasy_app/controller/map_navigation/MapPosition.dart';
 import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/model/MapPageArguments.dart';
+import 'package:guideasy_app/model/POIType.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
+import 'package:guideasy_app/redux/Actions.dart';
 
 class RoomSearchBar extends StatefulWidget {
   @override
@@ -83,7 +86,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(item.keyword,
+                      Text(item.title,
                         style: TextStyle(
                             fontSize: 16.0,
                             color: Colors.white
@@ -123,11 +126,13 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                   searchTextField.textField.controller.text = item.title
                 );
 
+                StoreProvider.of<AppState>(context).dispatch(new UpdateMapFiltersAction(new Map<POIType, bool>()));
+
                 PointOfInterest target = item;
                 Navigator.pushNamed(
                   context,
                   mapRoute,
-                  arguments: target);
+                  arguments: MapPageArguments(target, ""));
               },
               suggestions: pointsOfInterest
           );
