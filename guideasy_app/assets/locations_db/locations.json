@@ -7,7 +7,7 @@
       "description" : "Come here for the check-in",
       "type" : "reception",
       "keyword": "Receção",
-      "floor": 0
+      "floors": "0"
     },
 
     {
@@ -17,7 +17,7 @@
       "description" : "Find lost items or leave something you found here",
       "type" : "lost and found",
       "keyword": "Perdidos e Achados",
-      "floor": 1
+      "floors": "1"
     },
 
     {
@@ -27,7 +27,7 @@
       "description" : "Event's main auditorium",
       "type" : "room",
       "keyword": "Auditorio",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude" : 41.177662,
@@ -36,7 +36,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "232C",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude" : 41.177621,
@@ -45,7 +45,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "229",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude" : 41.177621,
@@ -54,7 +54,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "336",
-      "floor": 3
+      "floors": "3"
     },
     {
       "latitude" : 41.177559,
@@ -63,7 +63,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "113",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude" : 41.177567,
@@ -72,7 +72,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "110",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude" : 41.177517,
@@ -81,7 +81,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "111",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude" : 41.177505,
@@ -90,7 +90,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "237",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude" : 41.177348,
@@ -99,7 +99,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "105",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude" : 41.177820,
@@ -108,7 +108,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "001",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude" : 41.177788,
@@ -117,7 +117,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "002",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude" : 41.177788,
@@ -126,7 +126,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "003",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude" : 41.178052,
@@ -135,7 +135,7 @@
       "description" : "Workshop Room",
       "type" : "room",
       "keyword": "105",
-      "floor": -1
+      "floors": "-1"
     },
 
     {
@@ -145,7 +145,7 @@
       "description" : "",
       "type" : "coffee break",
       "keyword": "Coffee break",
-      "floor": 0
+      "floors": "0"
     },
 
     {
@@ -155,7 +155,7 @@
       "description": "",
       "type": "accessible wc",
       "keyword": "Casa de banho acessível",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178262,
@@ -164,7 +164,7 @@
       "description": "WC below main auditorium",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178306,
@@ -173,7 +173,7 @@
       "description": "WC below main auditorium",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177768,
@@ -182,7 +182,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177768,
@@ -191,7 +191,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude": 41.177768,
@@ -200,7 +200,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude": 41.177768,
@@ -209,7 +209,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 3
+      "floors": "3"
     },
     {
       "latitude": 41.177804,
@@ -218,7 +218,7 @@
       "description": "",
       "type": "accessible wc",
       "keyword": "Casa de banho masculina acessível",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177728,
@@ -227,7 +227,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177728,
@@ -236,7 +236,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude": 41.177728,
@@ -245,7 +245,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude": 41.177728,
@@ -254,7 +254,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 3
+      "floors": "3"
     },
     {
       "latitude": 41.177738,
@@ -263,7 +263,7 @@
       "description": "",
       "type": "accessible wc",
       "keyword": "Casa de banho masculina acessível",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177555,
@@ -272,7 +272,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177555,
@@ -281,7 +281,7 @@
       "description": "",
       "type": "male wc",
       "keyword": "Casa de banho masculina",
-      "floor": 2
+      "floors": "2"
     },
     {
       "latitude": 41.177555,
@@ -290,7 +290,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 1
+      "floors": "1"
     },
     {
       "latitude": 41.177555,
@@ -299,7 +299,7 @@
       "description": "",
       "type": "female wc",
       "keyword": "Casa de banho feminina",
-      "floor": 3
+      "floors": "3"
     },
     {
       "latitude": 41.177572,
@@ -308,7 +308,7 @@
       "description": "",
       "type": "accessible wc",
       "keyword": "Casa de banho masculina acessível",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178070,
@@ -317,7 +317,7 @@
       "description": "WC in Informatics Department",
       "type": "male wc",
       "keyword": "Casa de banho masculina no Departamento de Informática",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178070,
@@ -326,7 +326,7 @@
       "description": "WC in Informatics Department",
       "type": "female wc",
       "keyword": "Casa de banho feminina no Departamento de Informática",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178185,
@@ -335,7 +335,7 @@
       "description": "WC in Informatics Department",
       "type": "male wc",
       "keyword": "Casa de banho masculina no Departamento de Informática",
-      "floor": -1
+      "floors": "-1"
     },
     {
       "latitude": 41.178214,
@@ -344,7 +344,7 @@
       "description": "WC in Informatics Department",
       "type": "female wc",
       "keyword": "Casa de banho feminina no Departamento de Informática",
-      "floor": -1
+      "floors": "-1"
     },
 
     {
@@ -354,7 +354,7 @@
       "description": "Elevator between entrance and reception/B corridor",
       "type": "elevator",
       "keyword": "Elevador entre entrada e receção e corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177828,
@@ -363,7 +363,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177764,
@@ -372,7 +372,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177686,
@@ -381,7 +381,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177620,
@@ -390,7 +390,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177510,
@@ -399,7 +399,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177412,
@@ -408,7 +408,7 @@
       "description": "Elevator in B corridor",
       "type": "elevator",
       "keyword": "Elevador no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178150,
@@ -417,7 +417,7 @@
       "description": "Elevator in Informatics Department",
       "type": "elevator",
       "keyword": "Elevador no Departamento de Informática",
-      "floor": 0
+      "floors": "0"
     },
 
     {
@@ -427,7 +427,7 @@
       "description": "Stairs between entrance and reception/B corridor",
       "type": "stairs",
       "keyword": "Escadas entre entrada e receção e corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177828,
@@ -436,7 +436,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177764,
@@ -445,7 +445,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177686,
@@ -454,7 +454,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177620,
@@ -463,7 +463,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177510,
@@ -472,7 +472,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177412,
@@ -481,7 +481,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.177412,
@@ -490,7 +490,7 @@
       "description": "Stairs in B corridor",
       "type": "stairs",
       "keyword": "Escadas no corredor B",
-      "floor": 0
+      "floors": "0"
     },
     {
       "latitude": 41.178150,
@@ -499,7 +499,7 @@
       "description": "Stairs in Informatics Department",
       "type": "stairs",
       "keyword": "Escadas no Departamento de Informática",
-      "floor": -1
+      "floors": "-1"
     }
   ]
 }

@@ -8,7 +8,7 @@ class PointOfInterest {
   String description;
   String keyword;
   POIType type;
-  int floor;
+  String floors;
 
   PointOfInterest(
     this.id,
@@ -18,7 +18,7 @@ class PointOfInterest {
     this.description,
     this.keyword,
     this.type,
-    this.floor
+    this.floors
   );
 
   factory PointOfInterest.fromJson(int id, Map<String, dynamic> parsedJson) {
@@ -30,7 +30,7 @@ class PointOfInterest {
       parsedJson['description'] as String,
       parsedJson['keyword'] as String,
       stringToPOIType(parsedJson['type']),
-      parsedJson['floor']
+      parsedJson['floors'] as String
     );
   }
 
@@ -43,7 +43,7 @@ class PointOfInterest {
       'description' : description,
       'keyword' : keyword,
       'type' : type.index,
-      'floor' : floor
+      'floors' : floors
     };
   }
 

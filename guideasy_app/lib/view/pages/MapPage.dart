@@ -62,7 +62,7 @@ class _ConferenceMap extends State<MapPage> {
 
             if(widget.initialTarget != null) {
               addMarkerFromPOI(widget.initialTarget);
-              _animateToTargetPOI();
+              _animateToTargetPOI(widget.initialTarget);
             }
             else
               updateMarkers(context);
@@ -76,7 +76,8 @@ class _ConferenceMap extends State<MapPage> {
         floatingActionButton: FloatingActionButton.extended(
             onPressed: _recenterMap,
             label: Text('Recenter Map'),
-            icon: Icon(Icons.gps_fixed)
+            icon: Icon(Icons.gps_fixed),
+            backgroundColor: Theme.of(context).backgroundColor
         ),
         endDrawer: Tooltip(
           message: "Map filters",
@@ -89,9 +90,9 @@ class _ConferenceMap extends State<MapPage> {
     );
   }
 
-  void _animateToTargetPOI() {
+  void _animateToTargetPOI(PointOfInterest target) {
     Future.delayed(const Duration(seconds: 1), () {
-      _animateTo(LatLng(widget.initialTarget.latitude, widget.initialTarget.longitude), 22);
+      _animateTo(LatLng(target.latitude, target.longitude), 22);
     });
 
     Future.delayed(const Duration(seconds: 3), () async{
@@ -136,13 +137,17 @@ class _ConferenceMap extends State<MapPage> {
   }
 
   void addMarkerFromPOI(PointOfInterest poi) {
+    String floorText = poi.floors.contains(',') ? ", Floors " : ", Floor ";
     MarkerId markerId = MarkerId(poi.id.toString());
     Marker newMarker = Marker(
         markerId: markerId,
         position: LatLng(poi.latitude, poi.longitude),
         infoWindow: InfoWindow(
-            title: poi.title,
-            snippet: poi.description
+            title: poi.title + floorText + poi.floors,
+            snippet: poi.description,
+            onTap: () {
+              _animateToTargetPOI(poi);
+            }
         )
     );
 
