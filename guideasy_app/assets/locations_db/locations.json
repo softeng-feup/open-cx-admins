@@ -11,6 +11,16 @@
     },
 
     {
+      "latitude" : 41.178041,
+      "longitude" :  -8.597699,
+      "title" : "Lost and Found",
+      "description" : "Find lost items or leave something you found here.",
+      "type" : "lost and found",
+      "keyword": "Perdidos e Achados",
+      "floor": 1
+    },
+
+    {
       "latitude" : 41.178292,
       "longitude" :  -8.597841,
       "title" : "Auditorium",
@@ -313,6 +323,71 @@
       "description": "WC in Informatics Department",
       "type": "female wc",
       "floor": -1
+    },
+
+    {
+      "latitude": 41.177911,
+      "longitude": -8.597502,
+      "title": "Elevator",
+      "description": "Elevator between entrance and reception/B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177828,
+      "longitude": -8.597196,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177764,
+      "longitude": -8.596833,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177686,
+      "longitude": -8.596359,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177620,
+      "longitude": -8.596004,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177510,
+      "longitude": -8.595538,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177412,
+      "longitude": -8.595190,
+      "title": "Elevator",
+      "description": "Elevator in B corridor",
+      "type": "elevator",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178150,
+      "longitude": -8.595344,
+      "title": "Elevator",
+      "description": "Elevator in Informatics Department",
+      "type": "elevator",
+      "floor": 0
     }
   ]
 }
