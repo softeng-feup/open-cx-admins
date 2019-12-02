@@ -92,8 +92,8 @@
       "floor": 1
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177820,
+      "longitude" : -8.595746,
       "title" : "B001",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -101,8 +101,8 @@
       "floor": 0
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177788,
+      "longitude" : -8.595631,
       "title" : "B002",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -110,8 +110,8 @@
       "floor": 0
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.177788,
+      "longitude" : -8.595631,
       "title" : "B003",
       "description" : "Workshop Room.",
       "type" : "room",
@@ -119,14 +119,15 @@
       "floor": 0
     },
     {
-      "latitude" : 41.17775,
-      "longitude" : -8.596625,
+      "latitude" : 41.178052,
+      "longitude" : -8.595465,
       "title" : "I-105",
       "description" : "Workshop Room.",
       "type" : "room",
       "keyword": "105",
-      "floor": 1
+      "floor": -1
     },
+
     {
       "latitude" : 41.177598,
       "longitude" : -8.595825,
@@ -135,6 +136,183 @@
       "type" : "coffee break",
       "keyword": "Coffee break",
       "floor": 0
+    },
+
+    {
+      "latitude": 41.178324,
+      "longitude":  -8.597821,
+      "title": "Accessible WC",
+      "description": "",
+      "type": "accessible wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178262,
+      "longitude": -8.597864,
+      "title": "Male WC",
+      "description": "WC below main auditorium",
+      "type": "male wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178306,
+      "longitude": -8.597873,
+      "title": "Female WC",
+      "description": "WC below main auditorium",
+      "type": "female wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177768,
+      "longitude": -8.596738,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177768,
+      "longitude": -8.596738,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 2
+    },
+    {
+      "latitude": 41.177768,
+      "longitude": -8.596738,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 1
+    },
+    {
+      "latitude": 41.177768,
+      "longitude": -8.596738,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 3
+    },
+    {
+      "latitude": 41.177804,
+      "longitude": -8.596767,
+      "title": "Male Accessible WC",
+      "description": "",
+      "type": "accessible wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177728,
+      "longitude": -8.596453,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177728,
+      "longitude": -8.596453,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 2
+    },
+    {
+      "latitude": 41.177728,
+      "longitude": -8.596453,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 1
+    },
+    {
+      "latitude": 41.177728,
+      "longitude": -8.596453,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 3
+    },
+    {
+      "latitude": 41.177738,
+      "longitude": -8.596406,
+      "title": "Male Accessible WC",
+      "description": "",
+      "type": "accessible wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177555,
+      "longitude": -8.595615,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.177555,
+      "longitude": -8.595615,
+      "title": "Male WC",
+      "description": "",
+      "type": "male wc",
+      "floor": 2
+    },
+    {
+      "latitude": 41.177555,
+      "longitude": -8.595615,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 1
+    },
+    {
+      "latitude": 41.177555,
+      "longitude": -8.595615,
+      "title": "Female WC",
+      "description": "",
+      "type": "female wc",
+      "floor": 3
+    },
+    {
+      "latitude": 41.177572,
+      "longitude": -8.595569,
+      "title": "Male Accessible WC",
+      "description": "",
+      "type": "accessible wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178070,
+      "longitude": -8.595198,
+      "title": "Male WC",
+      "description": "WC in Informatics Department",
+      "type": "male wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178070,
+      "longitude": -8.595252,
+      "title": "Female WC",
+      "description": "WC in Informatics Department",
+      "type": "female wc",
+      "floor": 0
+    },
+    {
+      "latitude": 41.178185,
+      "longitude": -8.595317,
+      "title": "Male WC",
+      "description": "WC in Informatics Department",
+      "type": "male wc",
+      "floor": -1
+    },
+    {
+      "latitude": 41.178214,
+      "longitude": -8.595317,
+      "title": "Female WC",
+      "description": "WC in Informatics Department",
+      "type": "female wc",
+      "floor": -1
     }
   ]
 }
