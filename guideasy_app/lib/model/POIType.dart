@@ -74,6 +74,8 @@ IconData poiTypeIcon(POIType type) {
       return GuideasyIcons.coffee;
     case POIType.VENDING_MACHINE:
       return GuideasyIcons.vending_machine;
+    case POIType.SNACK_BAR:
+      return Icons.local_dining;
     case POIType.PARKING:
       return Icons.local_parking;
     case POIType.UNDEFINED:

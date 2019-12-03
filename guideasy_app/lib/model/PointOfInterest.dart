@@ -8,6 +8,7 @@ class PointOfInterest {
   String description;
   String keyword;
   POIType type;
+  String floors;
 
   PointOfInterest(
     this.id,
@@ -16,18 +17,20 @@ class PointOfInterest {
     this.title,
     this.description,
     this.keyword,
-    this.type
+    this.type,
+    this.floors
   );
 
-  factory PointOfInterest.fromJson(Map<String, dynamic> parsedJson) {
+  factory PointOfInterest.fromJson(int id, Map<String, dynamic> parsedJson) {
     return PointOfInterest(
-      parsedJson['id'],
+      id,
       parsedJson['latitude'] as double,
       parsedJson['longitude'] as double,
       parsedJson['title'] as String,
       parsedJson['description'] as String,
       parsedJson['keyword'] as String,
-      stringToPOIType(parsedJson['type'])
+      stringToPOIType(parsedJson['type']),
+      parsedJson['floors'] as String
     );
   }
 
@@ -39,7 +42,8 @@ class PointOfInterest {
       'title': title,
       'description' : description,
       'keyword' : keyword,
-      'type' : type.index
+      'type' : type.index,
+      'floors' : floors
     };
   }
 

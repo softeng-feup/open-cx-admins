@@ -27,7 +27,7 @@ ThunkAction<AppState> getRemotePointsOfInterest() {
       
       var categoryJson = parsedJson['locations'] as List;
       for(int i = 0; i < categoryJson.length; i++) {
-        pointsOfInterest.add(new PointOfInterest.fromJson(categoryJson[i]));
+        pointsOfInterest.add(new PointOfInterest.fromJson(i+1, categoryJson[i]));
       }
 
       // save points of interest in the database
