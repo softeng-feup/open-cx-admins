@@ -1,10 +1,13 @@
+import 'dart:async';
+import 'dart:async';
+import 'dart:core';
+
 import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:guideasy_app/constants.dart';
-import 'package:guideasy_app/controller/map_navigation/MapNavigation.dart';
 import 'package:guideasy_app/controller/map_navigation/MapPosition.dart';
 import 'package:guideasy_app/model/AppState.dart';
 import 'package:guideasy_app/model/MapPageArguments.dart';
@@ -24,6 +27,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
   GlobalKey<AutoCompleteTextFieldState<PointOfInterest>> key = new GlobalKey();
 
   _RoomSearchBarState();
+  MapPosition _gpsPosition;
 
   @override
   void initState() {
@@ -32,6 +36,10 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
 
   @override
   Widget build(BuildContext context) {
+
+    getCurrentPosition().then((Position pos) {
+      _gpsPosition = MapPosition(pos.latitude, pos.longitude);
+    });
 
     return StoreConnector<AppState, List<PointOfInterest>>(
         converter: (store) => store.state.content['pointsOfInterest'],
@@ -65,8 +73,15 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                   .of(context)
                   .textTheme
                   .body2,
-              clearOnSubmit: false,
+              clearOnSubmit: true,
               itemBuilder: (context, item) {
+
+                String distance = "?";
+                if (_gpsPosition != null) {
+                  MapPosition poiPos = MapPosition(item.latitude, item.longitude);
+                  distance = _gpsPosition.distanceTo(poiPos).round().toString() + "m";
+                }
+
                 return Container(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   constraints: BoxConstraints(
@@ -74,9 +89,6 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                       minHeight: 70.0
                   ),
                   decoration: BoxDecoration(
-                      /* borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(20),
-                          right: Radius.circular(20)),*/
                       color: Colors.orangeAccent,
                       border: Border.all(
                           color: Colors.orange,
@@ -93,7 +105,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      Text('10m',
+                      Text(distance,
                           style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.white
@@ -118,7 +130,9 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                 return q1 || q2 || q3 || q4;
               },
               itemSorter: (a, b) {
-                return a.title.compareTo(b.title);
+                int dist1 = _gpsPosition.distanceTo(MapPosition(a.latitude, a.longitude)).round();
+                int dist2 = _gpsPosition.distanceTo(MapPosition(b.latitude, b.longitude)).round();
+                return dist1.compareTo(dist2);
               },
               key: key,
               itemSubmitted: (item) {
@@ -140,4 +154,12 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
         }
     );
   }
+
+  Future<Position> getCurrentPosition() async {
+    bool gpsEnabled = await Geolocator().isLocationServiceEnabled();
+    if (gpsEnabled)
+      return Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
+    else
+      return await Geolocator().getLastKnownPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
+    }
 }
