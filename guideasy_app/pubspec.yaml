@@ -31,6 +31,8 @@ dependencies:
   redux_thunk: ^0.2.1
   geolocator: ^5.1.5
   flutter_gherkin: ^1.1.4
+  fluttertoast: ^3.1.3
+  connectivity: ^0.4.5
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +76,9 @@ flutter:
         - asset: fonts/Roboto-Light.ttf
         - asset: fonts/Roboto-Medium.ttf
         - asset: fonts/Roboto-Thin.ttf
+    - family:  GuideasyIcons
+      fonts:
+        - asset: fonts/GuideasyIcons.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

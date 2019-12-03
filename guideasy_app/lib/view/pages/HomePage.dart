@@ -53,21 +53,24 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 30,
               crossAxisCount: 3,
               children: <Widget>[
-                HomePageButton(POIType.WC),
+                HomePageButton(POIType.MALE_WC),
+                HomePageButton(POIType.ACCESS_WC),
+                HomePageButton(POIType.FEMALE_WC),
                 HomePageButton(POIType.ELEVATOR),
-                HomePageButton(POIType.STAIRS),
-                HomePageButton(POIType.SNACK_BAR),
-                HomePageButton(POIType.VENDING_MACHINE),
                 HomePageButton(POIType.COFFEE_BREAK, key: const Key("nearest poi button")),
+                HomePageButton(POIType.VENDING_MACHINE),
                 HomePageButton(POIType.LOST_AND_FOUND),
-                HomePageButton(POIType.RECEPTION),
                 HomePageButton(POIType.ROOM),
+                HomePageButton(POIType.RECEPTION),
               ],
             ),
           ),
           Expanded(
             flex: 2,
-            child: MapSlideButton(key: const Key("map slide button")),
+            child: Tooltip(
+              message: "Open event map",
+              child: MapSlideButton(key: const Key("map slide button"))
+            ),
           )
         ],
       ),

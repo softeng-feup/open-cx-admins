@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:guideasy_app/constants.dart';
 import 'package:guideasy_app/controller/map_navigation/MapNavigation.dart';
 import 'package:guideasy_app/controller/map_navigation/MapPosition.dart';
 import 'package:guideasy_app/model/AppState.dart';
+import 'package:guideasy_app/model/MapPageArguments.dart';
 import 'package:guideasy_app/model/POIType.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
+import 'package:guideasy_app/redux/Actions.dart';
 
 class HomePageButton extends StatelessWidget {
   final IconData icon;
@@ -17,6 +20,8 @@ class HomePageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData media = MediaQuery.of(context);
+    var size = media.size;
     return StoreConnector<AppState, List<PointOfInterest>>(
       converter: (store) => store.state.content["pointsOfInterest"],
       builder: (context, pointsOfInterest) {
@@ -25,11 +30,11 @@ class HomePageButton extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
           shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10)),
           child: Tooltip(
-            message: "Find nearest",
+            message: "Find nearest point of interest",
             child: Icon(
               icon,
               color: Theme.of(context).backgroundColor,
-              size: 80
+              size: size.width/6
             ),
           ),
           onPressed: () async {
@@ -41,7 +46,10 @@ class HomePageButton extends StatelessWidget {
               position = await Geolocator().getLastKnownPosition(desiredAccuracy: LocationAccuracy.bestForNavigation);
 
             if (position == null) {
-              print('Could not determine current position');
+              Navigator.pushNamed(
+                  context,
+                  mapRoute,
+                  arguments: MapPageArguments(null, "Could not determine current position"));
               return;
             }
 
@@ -49,14 +57,18 @@ class HomePageButton extends StatelessWidget {
             PointOfInterest target = nearestPOIOfType(currentPos, type, pointsOfInterest);
 
             if (target == null) {
-              print('did not find any POI of that type');
+              Navigator.pushNamed(
+                  context,
+                  mapRoute,
+                  arguments: MapPageArguments(null, "Did not find any Point of Interest"));
               return;
             }
 
+            StoreProvider.of<AppState>(context).dispatch(new UpdateMapFiltersAction(new Map<POIType, bool>()));
             Navigator.pushNamed(
                 context,
                 mapRoute,
-                arguments: target);
+                arguments: MapPageArguments(target, ""));
           },
         );
       }

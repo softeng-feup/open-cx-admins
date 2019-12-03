@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:guideasy_app/constants.dart';
+import 'package:guideasy_app/model/MapPageArguments.dart';
 import 'package:guideasy_app/model/PointOfInterest.dart';
 import 'package:guideasy_app/view/pages/HomePage.dart';
 import 'package:guideasy_app/view/pages/MapPage.dart';
@@ -14,8 +15,14 @@ class Router {
       case homeRoute:
         return MaterialPageRoute(builder: (_) => new HomePage());
       case mapRoute:
-        final PointOfInterest poi = settings.arguments;
-        return MaterialPageRoute(builder: (_) => new MapPage(initialTarget: poi));
+        final MapPageArguments mapArgs = settings.arguments;
+        PointOfInterest initialPOI = mapArgs == null ? null : mapArgs.poi;
+        String initialToast = mapArgs == null ? "" : mapArgs.initialToast;
+
+        return MaterialPageRoute(builder: (_) => new MapPage(
+            initialTarget: initialPOI,
+            initialToast: initialToast
+        ));
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
