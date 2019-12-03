@@ -38,7 +38,7 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
   Widget build(BuildContext context) {
 
     getCurrentPosition().then((Position pos) {
-      _gpsPosition = MapPosition(pos.latitude, pos.longitude);
+      _gpsPosition = pos == null ? null : MapPosition(pos.latitude, pos.longitude);
     });
 
     return StoreConnector<AppState, List<PointOfInterest>>(
@@ -98,18 +98,25 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(item.title,
-                        style: TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white
+                      Expanded(
+                        flex: 3,
+                        child: Text(item.title,
+                          style: TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.white
+                          ),
+                          textAlign: TextAlign.left,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                      Text(distance,
+                      Expanded(
+                        flex: 1,
+                        child: Text(distance,
                           style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.white
-                          )),
+                          ),
+                          textAlign: TextAlign.right,),
+                      ),
                     ],
                   ),
                 );
@@ -130,6 +137,8 @@ class _RoomSearchBarState extends State<RoomSearchBar> {
                 return q1 || q2 || q3 || q4;
               },
               itemSorter: (a, b) {
+                if (_gpsPosition == null) return a.title.compareTo(b.title);
+                
                 int dist1 = _gpsPosition.distanceTo(MapPosition(a.latitude, a.longitude)).round();
                 int dist2 = _gpsPosition.distanceTo(MapPosition(b.latitude, b.longitude)).round();
                 return dist1.compareTo(dist2);
