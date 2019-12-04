@@ -17,7 +17,7 @@
       "title" : "Lost and Found",
       "description" : "Find lost items or leave something you found here",
       "type" : "lost and found",
-      "keyword": "Perdidos e Achados",
+      "keyword": "Perdidos Achados",
       "floors": "1"
     },
 
@@ -158,7 +158,7 @@
       "title": "Accessible WC",
       "description": "WC below main auditorium",
       "type": "accessible wc",
-      "keyword": "Casa de banho acessível",
+      "keyword": "Casa banho acessível",
       "floors": "0"
     },
     {
@@ -167,7 +167,7 @@
       "title": "Male WC",
       "description": "WC below main auditorium",
       "type": "male wc",
-      "keyword": "Casa de banho masculina",
+      "keyword": "Casa banho masculina",
       "floors": "0"
     },
     {
@@ -176,7 +176,7 @@
       "title": "Female WC",
       "description": "WC below main auditorium",
       "type": "female wc",
-      "keyword": "Casa de banho feminina",
+      "keyword": "Casa banho feminina",
       "floors": "0"
     },
     {
@@ -185,7 +185,7 @@
       "title": "Male WC",
       "description": "",
       "type": "male wc",
-      "keyword": "Casa de banho masculina",
+      "keyword": "Casa banho masculina",
       "floors": "0,2"
     },
     {
@@ -194,7 +194,7 @@
       "title": "Female WC",
       "description": "",
       "type": "female wc",
-      "keyword": "Casa de banho feminina",
+      "keyword": "Casa banho feminina",
       "floors": "1,3"
     },
     {
@@ -203,7 +203,7 @@
       "title": "Male Accessible WC",
       "description": "",
       "type": "accessible wc",
-      "keyword": "Casa de banho masculina acessível",
+      "keyword": "Casa banho masculina acessível",
       "floors": "0"
     },
     {
@@ -212,7 +212,7 @@
       "title": "Male WC",
       "description": "",
       "type": "male wc",
-      "keyword": "Casa de banho masculina",
+      "keyword": "Casa banho masculina",
       "floors": "0,2"
     },
     {
@@ -221,7 +221,7 @@
       "title": "Female WC",
       "description": "",
       "type": "female wc",
-      "keyword": "Casa de banho feminina",
+      "keyword": "Casa banho feminina",
       "floors": "1,3"
     },
     {
@@ -230,7 +230,7 @@
       "title": "Male Accessible WC",
       "description": "",
       "type": "accessible wc",
-      "keyword": "Casa de banho masculina acessível",
+      "keyword": "Casa banho masculina acessível",
       "floors": "0"
     },
     {
@@ -239,7 +239,7 @@
       "title": "Male WC",
       "description": "",
       "type": "male wc",
-      "keyword": "Casa de banho masculina",
+      "keyword": "Casa banho masculina",
       "floors": "0,2"
     },
     {
@@ -248,7 +248,7 @@
       "title": "Female WC",
       "description": "",
       "type": "female wc",
-      "keyword": "Casa de banho feminina",
+      "keyword": "Casa banho feminina",
       "floors": "1,3"
     },
     {
@@ -257,7 +257,7 @@
       "title": "Male Accessible WC",
       "description": "",
       "type": "accessible wc",
-      "keyword": "Casa de banho masculina acessível",
+      "keyword": "Casa banho masculina acessível",
       "floors": "0"
     },
     {
@@ -266,7 +266,7 @@
       "title": "Male WC",
       "description": "WC in Informatics Department",
       "type": "male wc",
-      "keyword": "Casa de banho masculina no Departamento de Informática",
+      "keyword": "Casa banho masculina Departamento Informática",
       "floors": "0"
     },
     {
@@ -275,7 +275,7 @@
       "title": "Female WC",
       "description": "WC in Informatics Department",
       "type": "female wc",
-      "keyword": "Casa de banho feminina no Departamento de Informática",
+      "keyword": "Casa banho feminina Departamento Informática",
       "floors": "0"
     },
     {
@@ -284,7 +284,7 @@
       "title": "Male WC",
       "description": "WC in Informatics Department",
       "type": "male wc",
-      "keyword": "Casa de banho masculina no Departamento de Informática",
+      "keyword": "Casa banho masculina Departamento Informática",
       "floors": "-1"
     },
     {
@@ -293,7 +293,7 @@
       "title": "Female WC",
       "description": "WC in Informatics Department",
       "type": "female wc",
-      "keyword": "Casa de banho feminina no Departamento de Informática",
+      "keyword": "Casa banho feminina Departamento Informática",
       "floors": "-1"
     },
     {
@@ -302,7 +302,7 @@
       "title": "Male WC",
       "description": "WC in Cafeteria",
       "type": "male wc",
-      "keyword": "Casa de banho masculina no Bar de Minas Cafetaria",
+      "keyword": "Casa banho masculina Bar Minas Cafetaria",
       "floors": "0"
     },
     {
@@ -311,7 +311,7 @@
       "title": "Female WC",
       "description": "WC in Cafeteria",
       "type": "female wc",
-      "keyword": "Casa de banho feminina no Bar de Minas Cafetaria",
+      "keyword": "Casa banho feminina Bar Minas Cafetaria",
       "floors": "0"
     },
     {
@@ -320,7 +320,7 @@
       "title": "Accessible WC",
       "description": "Accessible WC in Cafeteria",
       "type": "accessible wc",
-      "keyword": "Casa de banho acessível no Bar de Minas Cafetaria",
+      "keyword": "Casa banho acessível Bar Minas Cafetaria",
       "floors": "0"
     },
 
@@ -330,7 +330,7 @@
       "title": "Elevator",
       "description": "Elevator between entrance and reception/B corridor",
       "type": "elevator",
-      "keyword": "Elevador entre entrada e receção e corredor B",
+      "keyword": "Elevador entrada receção corredor B",
       "floors": "0,1,2"
     },
     {
@@ -339,7 +339,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -348,7 +348,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -357,7 +357,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -366,7 +366,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -375,7 +375,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -384,7 +384,7 @@
       "title": "Elevator",
       "description": "Elevator in B corridor",
       "type": "elevator",
-      "keyword": "Elevador no corredor B",
+      "keyword": "Elevador corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -393,7 +393,7 @@
       "title": "Elevator",
       "description": "Elevator in Informatics Department",
       "type": "elevator",
-      "keyword": "Elevador no Departamento de Informática",
+      "keyword": "Elevador Departamento Informática",
       "floors": "-1,0,1,2,3"
     },
 
@@ -404,7 +404,7 @@
       "title": "Stairs",
       "description": "Stairs between entrance and reception/B corridor",
       "type": "stairs",
-      "keyword": "Escadas entre entrada e receção e corredor B",
+      "keyword": "Escadas entrada receção corredor B",
       "floors": "0,1"
     },
     {
@@ -413,7 +413,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -422,7 +422,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -431,7 +431,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -440,7 +440,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -449,7 +449,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -458,7 +458,7 @@
       "title": "Stairs",
       "description": "Stairs in B corridor",
       "type": "stairs",
-      "keyword": "Escadas no corredor B",
+      "keyword": "Escadas corredor B",
       "floors": "0,1,2,3"
     },
     {
@@ -467,7 +467,7 @@
       "title": "Stairs",
       "description": "Stairs in Informatics Department",
       "type": "stairs",
-      "keyword": "Escadas no Departamento de Informática",
+      "keyword": "Escadas Departamento Informática",
       "floors": "-1, 0, 2, 3"
     },
 
@@ -477,7 +477,7 @@
       "title": "Library Snack Bar",
       "description": "Small cafeteria with snacks and sandwiches",
       "type": "snack bar",
-      "keyword": "Snack Bar da Biblioteca",
+      "keyword": "Snack Bar Biblioteca",
       "floors": "-1"
     },
     {
@@ -486,7 +486,7 @@
       "title": "Cafeteria",
       "description": "Cafeteria with snacks and meals",
       "type": "snack bar",
-      "keyword": "Snack Bar de Minas Cafetaria",
+      "keyword": "Snack Bar Minas Cafetaria",
       "floors": "0"
     },
 
@@ -497,7 +497,7 @@
       "title": "Coffee and Vending Machine",
       "description": "Informatics Department",
       "type": "vending machine",
-      "keyword": "Máquina automática café departamento de informática",
+      "keyword": "Máquina automática café departamento informática",
       "floors": "-1"
     },
     {
