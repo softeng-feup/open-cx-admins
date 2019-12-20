@@ -12,16 +12,13 @@ You can find here detailed information about the (sub)product, hereby mentioned 
   * [User stories](#User-stories)
   * [Domain model](#Domain-model)
 * Architecture and Design
-  * [Architectural and design decisions]()
-  * [Technological architecture]()
-  * [Logical architecture]()
-* Implementation
-  * [Source code]()
-  * [Issues](): feature requests, bug fixes, improvements.
+  * [Logical Architecture](#Logical-architecture)
+  * [Physical Architecture](#Physical-architecture)
+  * [Prototype](#Prototype)
+* [Implementation](#Implementation)
 * Test
   * [Automated tests](#Automated-Tests): Functional tests, integration tests, acceptance tests, as much automated as possible.
-* Change management
-  * [Issues at Github]()
+* [Change management](#Change-Management)
 * Project management
   * [Tasks management tool](#Tasks-Management-Tool)
 
@@ -40,19 +37,6 @@ Thank you!
 :dragon_face: [Pedro Esteves](https://github.com/pemesteves "pemesteves")
 
 ## Product Vision :zap:
-```
-Start by defining a clear and concise vision for your module, to help members of the team, contributors, and users into focusing their often disparate views into a concise, visual, and short textual form. It provides a "high concept" of the product for marketers, developers, and managers.
-
-A product vision describes the essential of the product and sets the direction to where a product is headed, and what the product will deliver in the future.
-
-To learn more about how to write a good product vision, please see also:
-* [How To Create A Convincing Product Vision To Guide Your Team, by uxstudioteam.com](https://uxstudioteam.com/ux-blog/product-vision/)
-* [Product Management: Product Vision, by ProductPlan](https://www.productplan.com/glossary/product-vision/)
-* [Vision, by scrumbook.org](http://scrumbook.org/value-stream/vision.html)
-* [How to write a vision, by dummies.com](https://www.dummies.com/business/marketing/branding/how-to-write-vision-and-mission-statements-for-your-brand/)
-* [20 Inspiring Vision Statement Examples (2019 Updated), by lifehack.org](https://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
-```
-
 
 Swift navigation between key spots in a conference through a mobile app.
 
@@ -60,41 +44,14 @@ Swift navigation between key spots in a conference through a mobile app.
 
 
 ## Elevator Pitch :speech_balloon:
-```Draft a small text to help you quickly introduce and describe your product in a short time and a few words, a technique usually known as elevator pitch.
 
-Take a look at the following links to learn some techniques:
-* [Crafting an Elevator Pitch](https://www.mindtools.com/pages/article/elevator-pitch.htm)
-* [The Best Elevator Pitch Examples, Templates, and Tactics - A Guide to Writing an Unforgettable Elevator Speech, by strategypeak.com](https://strategypeak.com/elevator-pitch-examples/)
-* [Top 7 Killer Elevator Pitch Examples, by toggl.com](https://blog.toggl.com/elevator-pitch-examples/)
-```
 
-Attendees are often frustrated by the effort it takes to find the conference rooms, bathrooms, coffee break places, vending machines and snack-bars near a conference location. Guideasy eliminates the need to wander around and ask everyone where those places are. With our app, you can spend less wasted time searching where to go and focus on the conference itself. Here is our business card, do feel free to call us anytime. Thanks for your time!
+Guideasy is an easy-to-use app, that allows you to quickly find anything you might ever need in an event. It's got an interactive map of the venue with your real-time position on it, all of the time, using GPS technology. It also shows the position of every point of interest you may need, allowing you to easily filter through them, so that only what you want is displayed, whether it's the snack bar, vending machines, restrooms, elevators, etc. You can also look for a room using a search bar with autocomplete functionalities. Finally, there's a set of key spots, in the main screen, that you can select. It'll then calculate the closest one to you, of the type you have selected, and display it on the map.
 
 
 ## Requirements :clipboard:
 
-```
-In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
-
-Start by contextualizing your module, describing the main concepts, terms, roles, scope and boundaries of the application domain addressed by the project.
-```
-
 ### Use case diagram 
-
-```
-Create a use-case diagram in UML with all high-level use cases possibly addressed by your module.
-
-Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
-
-Briefly describe each use case mentioning the following:
-
-* **Actor**. Name only the actor that will be initiating this use case, i.e. a person or other entity external to the software system being specified who interacts with the system and performs use cases to accomplish tasks. 
-* **Description**. Provide a brief description of the reason for and outcome of this use case, or a high-level description of the sequence of actions and the outcome of executing the use case. 
-* **Preconditions and Postconditions**. Include any activities that must take place, or any conditions that must be true, before the use case can be started (preconditions) and postconditions. Describe also the state of the system at the conclusion of the use case execution (postconditions). 
-
-* **Normal Flow**. Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal, expected conditions. This dialog sequence will ultimately lead to accomplishing the goal stated in the use case name and description. This is best done as a numbered list of actions performed by the actor, alternating with responses provided by the system. 
-* **Alternative Flows and Exceptions**. Document other, legitimate usage scenarios that can take place within this use case, stating any differences in the sequence of steps that take place. In addition, describe any anticipated error conditions that could occur during execution of the use case, and define how the system is to respond to those conditions. 
-```
 
 ![Use cases diagram](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/use_cases/guideasy_use_cases.png "Guideasy Use Cases")
 
@@ -110,7 +67,7 @@ Presents direction to a specified POI, allowing easy navigation to anywhere that
 
 * **Preconditions**
 
-The user must select a desired POI and he must in range to one of the bluetooth beacons, so that his position can be accurately determined.
+The user must select a desired POI and he must be in range to one of the bluetooth beacons, so that his position can be accurately determined.
 
 * **Postconditions**
 
@@ -119,7 +76,7 @@ The app will highlight a path to the POI in the map.
 * **Normal Flow**
 
 1. The user selects a POI on the app's interactive map.
-2. A bluetooth beacon, connected to the user's cellphone at the moment, will extract information from the user's position.
+2. The user's position will be calculated using the position of close bluetooth beacon(s).
 3. A path will be calculated from the user's position to the selected POI's position.
 4. The resulting path will be display on the app's interactive map, by highlighting the roads or corridors to it.
 
@@ -168,27 +125,39 @@ The app will show the information about the selected POI.
     2. The information about the selected POI will be display on the app's interactive map, near that point.
 ---
 
+#### Show closest POI of type
+
+* **Actor**
+
+A conference attendant.
+
+* **Description**
+
+Show POI of specified type that is closest to user.
+
+* **Preconditions**
+
+The user must select a type of POI in the main page.
+
+* **Postconditions**
+
+There will be a marker on the map on the position of the POI of the specified type that is closest to user.
+
+* **Normal Flow**
+
+1. The user selects POI type on the app's home page.
+2. The distance from user to the POIs of that type is calculated and the closest one is selected.
+3. The closest POI is shown as a marker on the map page.
+
+* **Alternative Flows and Exceptions**
+
+1. The user searches for a room in the home page search bar
+2. The user selects a room in the search bar suggestions
+3. A marker on the room's position is showed on the map
+---
 
 
 ### User stories
-
-```
-This section will contain the requirements of the product described as **user stories**, organized in a global **user story map** with **user roles** or **themes**.
-
-For each theme, or role, you may add a small description here. User stories should be detailed in the tool you decided to use for project management (e.g. trello or github projects).
-
-A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
-
-*As a < user role >, I want < goal > so that < reason >.*
-
-You add more details after, but the shorter and complete, the better. In order to decide if the user story is good, please follow the INVEST guidelines.
-
-After the user story text, you should add a draft of the corresponding user interfaces, a simple mockups or drafts, if applicable.
-
-For each user story you should write also the acceptance tests (textually in Gherkin), ie, a description of situations that will help to confirm that the system satisfies the requirements addressed in the user story.
-
-At the end, it is good to add a rough indication of the value of the user story to the customers (e.g. MoSCoW method) and the team should add an estimative of the effort to implement it, in t-shirt sizes (XS, S, M, L, XL).
-```
 
 The user stories are organized in the following user story map:
 
@@ -205,12 +174,83 @@ As a very hungry person, I want to quickly find any cafeterias or vending machin
 As a person with bladder issues, I want to find a bathroom as soon as I can, so that I don't embarrass myself.
 
 
+###### Where to find them
+Other user stories can be found in the group's [trello page](https://trello.com/b/9YiPpP4W/esof?menu=filter&filter=label:User%20Stories), under the **User Stories** card.
+
+---
+
 ### Domain model
-```
-A simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
-```
+
 ![Domain model](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/domain_model/domain_model.png)
 
+---
+
+## Architecture and Design
+
+
+### Logical architecture
+
+
+![Logical architecture model](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/architecture/logical_architecture.png)
+
+The code is organized in a Model-View-Controller fashion, using Redux to manage the application State.
+
+The `model/` folder holds data structures and domain object representations, such as PointOfInterest, AppState, POIType.
+
+The `view/` folder contains all the pages and widgets that are displayed to the user and with which he interacts.
+
+The `controller/` is responsible for handling the user requests and interactions, which are received through the view.
+
+Redux is used to centralize the application State, allowing different parts of the app to know the state of each other and easily connect them. This was used in order to prevent the need of passing down information from parent widgets to its grand grand children, making the code more readable and manageable.
+
+
+
+### Physical architecture
+
+![Physical architecture model](https://github.com/softeng-feup/open-cx-admins/raw/master/docs/physical_architecture/physical_architecture.jpg)
+
+
+With the intent of creating an application for navigation inside a conference, creating a mobile app seemed like the best choice, since everyone has a phone. By this means, each user could simply download the app and use it, without any additional hardware requirements.
+
+We considered and debated about two frameworks for mobile, Flutter and ReactNative. We opted with the former for its integration with Google Maps and its easier learning curve, in addition to some members already having some experience in it.
+
+In order to obtain information about our current position and be able no travel in the venue, our first approach was to interact with bluetooth beacons and calculate it through triangularization. We considered using Micro:bit, for its versatility and low costs. If implemented with success, this had the benefit of a more accurate position and tracking system, ideal in the inside of buildings (against GPS).
+
+However, this approach also had its downsides and challenges:
+- Necessity of placing many beacons around the event, increasing hardware costs;
+- No previous experience of our group on bluetooth technologies or low level hardware programming;
+- Requirement of implementing our own custom map of the venue in Flutter, highly increasing our workload;
+
+Having considered all the options, we opted for using the Google Maps API, which had a package in Flutter. It provides a Widget to display a map with a good enough set of customization options, easily allowing the user to navigate, pan, zoom and rotate around. We found that the advantages outweighed its problems and went forward with it. Even though the GPS tracking is not perfect inside buildings, it is good enough for a user to understand where he is and where he needs to go.
+
+Ideally, the information about the points of interest to display on the map should be provided through a server to all users, allowing it to be changed and updated anytime. While that option is still in development, we stored the data locally in a JSON file which we read at the start of the app. After read, the data is stored in a database and is persistently available to the user. We opted for an implementation of SQLite in Flutter for our database system.
+
+The result is a Mobile App, created in **Flutter**, which interacts through the internet with the **Google Maps API** to display the maps. It retrieves information about the Points of Interest at the beggining and stores it in a **SQLite database**. Finally, it makes use of **GPS** technology to get information about the user's location and guide him through the event.
+
+
+### Prototype
+
+As a first step, there was some discussion regarding what programming languages and technologies were going to be used in the app. It was then decided that Flutter would be the best choice.
+
+After that, the main focus of the first iteration became defining and implementing the user's interface, in a way that was easy to understand, while also being appealing and good-looking. This resulted in the creation of a splash screen and a main page.
+
+![Main Page Prototype](https://github.com/softeng-feup/open-cx-admins/blob/master/docs/ui_mockups/images/take_me_to.png)
+
+Finally, the last goal was to decide how to track the user's location, which then led to the inclusion of GPS technology in the project's plans.
+
+---
+
+## Implementation
+
+The app routes are separated from the `main.dart` and defined in [Router.dart](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/lib/controller/routes/Router.dart).
+
+Since we followed the Redux architecture, the state of the app is managed in an untypical manner. Instead of each stateful widget storing its state and passing it down through its children, this may be decoupled and stored in the [AppState](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/lib/model/AppState.dart).
+
+The Points of Interest are loaded and stored on the database on the start of the app by calling the appropriate Action. This, as other state changing methods, are defined in the [ActionCreators](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/lib/redux/ActionCreators.dart/lib/redux/ActionCreators.dart).
+
+To access the AppState, you must get a reference to a StoreProvider through the BuildContext. This can be done in many ways, such as wrapping the build method of a widget in a `StoreConnector` or by calling `StoreProvider.of<AppState>(context)`.
+
+---
 ## Tests
 
 ### Automated Tests
@@ -218,7 +258,18 @@ A simple UML class diagram with all the key concepts (names, attributes) and rel
 #### Acceptance Tests
 We have defined some acceptance tests using Gherkin, which can be found in our [Trello board](https://trello.com/b/9YiPpP4W/esof) under 'Acceptance Tests - Gherkin'.
 
-For now they are only defined. The goal is for them to be automated in our application.
+Some acceptance tests have been  [automated](https://github.com/softeng-feup/open-cx-admins/tree/master/guideasy_app/test_driver) using Flutter Gherkin. These features are:
+* [Map filters](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/test_driver/features/map_filters.feature)
+* [Opening map page](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/test_driver/features/map_page.feature)
+* [Splash screen transition](https://github.com/softeng-feup/open-cx-admins/blob/master/guideasy_app/test_driver/features/splash_screen.feature)
+
+## Change Management
+
+To manage changes in our repository, we followed GitHub flow. We marked our `master` branch as protected, making it necessary to use pull requests with at least one approving review before commiting to it.
+
+As features were being added, managed through `Trello`, we would create branches that were later merged into master.
+
+The end of each iteration is marked with a Tag.
 
 ## Project Management
 
