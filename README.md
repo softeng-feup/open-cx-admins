@@ -21,6 +21,7 @@ You can find here detailed information about the (sub)product, hereby mentioned 
 * [Change management](#Change-Management)
 * Project management
   * [Tasks management tool](#Tasks-Management-Tool)
+* [Planned Features](#Planned-Features)
 
 So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
@@ -214,7 +215,7 @@ With the intent of creating an application for navigation inside a conference, c
 
 We considered and debated about two frameworks for mobile, Flutter and ReactNative. We opted with the former for its integration with Google Maps and its easier learning curve, in addition to some members already having some experience in it.
 
-In order to obtain information about our current position and be able no travel in the venue, our first approach was to interact with bluetooth beacons and calculate it through triangularization. We considered using Micro:bit, for its versatility and low costs. If implemented with success, this had the benefit of a more accurate position and tracking system, ideal in the inside of buildings (against GPS).
+In order to obtain information about our current position and be able no travel in the venue, our first approach was to interact with bluetooth beacons and calculate it through triangulation. We considered using Micro:bit, for its versatility and low costs. If implemented with success, this had the benefit of a more accurate position and tracking system, ideal in the inside of buildings (against GPS).
 
 However, this approach also had its downsides and challenges:
 - Necessity of placing many beacons around the event, increasing hardware costs;
@@ -278,3 +279,12 @@ The end of each iteration is marked with a Tag.
 We use Trello to coordinate ourselves and to manage our tasks.
 
 You can find the board for this project [here](https://trello.com/b/9YiPpP4W/esof).
+
+## Planned Features
+
+We have some features in plan, defined in our [Trello board](https://trello.com/b/9YiPpP4W/esof) in the card `Backlog`. These include:
+
+- **Reading data from backend.** The required models and routes have already been defined in the open-cx server, the only change needed would be to read from there instead of from a local file, and to fill the open-cx server with our info.
+- **Custom icons on the map.** Even though its troublesome, the maps widget supports changing the icons of the markers. The idea would be to have an icon for each type of POI to better help identifying them. 
+- **Store event location as a graph.** The idea is to store additional points in the map, vertices and edges, to allow defining the paths between each point of interest and allow to draw paths in the map. This was marked as not prioritary since there would be additional complications, such as the user being away from any graph vertex and the application not being able to know how to draw the path correctly (locating the nearest POI is not a solution since the user can't traverse walls and floors).
+- **Interact with bluetooth.** Since GPS sometimes fails or is not accurate, the idea would be to use bluetooth beacons to, through triangulation, better determine the user location at any time. This would allow to also locate the current floor of the user.
